@@ -1,0 +1,72 @@
+[
+    {
+        "sidewalk":
+        {
+            "footway": "sidewalk", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "544894262", 
+            "highway": "footway"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.133286, 
+            "id": "5266841320", 
+            "lat": 33.887814
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.1332, 
+            "id": "5266841327", 
+            "lat": 33.888058
+        }
+    },
+    {
+        "sidewalk":
+        {
+            "footway": "sidewalk", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "544894255", 
+            "highway": "footway", 
+            "surface": "concrete"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.13358, 
+            "id": "5266841070", 
+            "lat": 33.886543
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.133484, 
+            "id": "5266841082", 
+            "lat": 33.88632
+        }
+    },
+    {
+        "sidewalk": 
+        {
+            "footway": "sidewalk", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "544894254", 
+            "highway": "footway"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.13352, 
+            "id": "5266840856", 
+            "lat": 33.8862
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.13358, 
+            "id": "5266841079", 
+            "lat": 33.88633
+        }
+    }
+]

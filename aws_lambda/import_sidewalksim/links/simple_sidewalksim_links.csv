@@ -1,0 +1,6 @@
+sidewalksimLinkID,sidewalksimLinkNodeA,sidewalksimLinkNodeB,sidewalksimLinkCentroidLongitude,sidewalksimLinkCentroidLatitude,sidewalksimLinkType,stmPedLinkLength
+500,7898691890,-200,-84.2392314,33.8802298,Sidewalk,1.0
+510,-200,-210,-84.2392517,33.8802441,Sidewalk,2.0
+520,-210,-220,-84.2392743,33.880259,Sidewalk,3.0
+530,-220,7898691910,-84.2380897,33.8787416,Sidewalk,4.0
+540,8810237418,7898691901,-84.2401143,33.879822,Sidewalk,5.0

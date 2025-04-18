@@ -1,0 +1,10 @@
+boto3
+graph-notebook
+jupyterlab>=3,<4
+neo4j
+pandas
+pyproj
+pytest
+pytest-order
+requests
+shapely

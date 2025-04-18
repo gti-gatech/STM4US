@@ -1,0 +1,88 @@
+{
+    "alerts": [
+        {
+            "country": "US", 
+            "nThumbsUp": 0, 
+            "reportRating": 4, 
+            "reportByMunicipalityUser": "false", 
+            "confidence": 3, 
+            "reliability": 10, 
+            "type": "JAM", 
+            "uuid": "723f9d64-08aa-4e2b-8964-219c4a6b988f", 
+            "roadType": 2, 
+            "magvar": 308, 
+            "subtype": "JAM_HEAVY_TRAFFIC", 
+            "street": "US-78 W", 
+            "location": {"x": -84.179911, "y": 33.829944}, 
+            "pubMillis": 1697455372000
+        }, 
+        {
+            "country": "US", 
+            "reportRating": 4, 
+            "reportByMunicipalityUser": "false", 
+            "confidence": 0, 
+            "reliability": 5, 
+            "type": "WEATHERHAZARD", 
+            "uuid": "aa2666a5-5054-44a7-abae-64db6d909124", 
+            "roadType": 6, 
+            "magvar": 46, 
+            "subtype": "", 
+            "street": "SR-10 E", 
+            "location": {"x": -84.181536, "y": 33.810679}, 
+            "pubMillis": 1697457512000
+        },
+        {
+            "country": "US", 
+            "reportRating": 5, 
+            "reportByMunicipalityUser": "false", 
+            "confidence": 5, 
+            "reliability": 10, 
+            "type": "WEATHERHAZARD", 
+            "uuid": "a3180f00-2eb8-454b-afe8-34d612430224", 
+            "roadType": 3, 
+            "magvar": 107, 
+            "subtype": "HAZARD_WEATHER_FLOOD", 
+            "street": "US-78 E", 
+            "location": {"x": -84.190732, "y": 33.833402}, 
+            "pubMillis": 1697455531000
+        }
+    ], 
+    "endTimeMillis": 1697457660000, 
+    "startTimeMillis": 1697457600000, 
+    "startTime": "2023-10-16 12:00:00:000", 
+    "endTime": "2023-10-16 12:01:00:000", 
+    "jams": [
+        {
+            "country": "US", 
+            "city": "Tucker, GA", 
+            "level": 3, 
+            "line": [{"x": -84.190692, "y": 33.823999}, {"x": -84.191397, "y": 33.824413}],
+            "speedKMH": 14.11, 
+            "length": 856, 
+            "turnType": "NONE", 
+            "type": "NONE", 
+            "uuid": 1723227156, 
+            "endNode": "Tucker", 
+            "speed": 3.9194444444444443, 
+            "segments": [
+                {
+                    "fromNode": 9630913, 
+                    "ID": 519720758, 
+                    "toNode": 510682182, 
+                    "isForward": false
+                }, 
+                {
+                    "fromNode": 510682182, 
+                    "ID": 519720757, 
+                    "toNode": 9630912, 
+                    "isForward": false
+                }
+            ],
+            "roadType": 7, 
+            "delay": 154, 
+            "startNode": "Tucker", 
+            "street": "E Ponce de Leon Ave", 
+            "pubMillis": 1697456322896
+        }
+    ]
+}

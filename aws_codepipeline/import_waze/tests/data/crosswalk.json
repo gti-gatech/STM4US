@@ -1,0 +1,76 @@
+[
+    {
+        "crosswalk": 
+        {
+            "footway": "crossing", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "1111062735", 
+            "highway": "footway", 
+            "crossing": "marked"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.14973, 
+            "id": "10166484825", 
+            "lat": 33.892887
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.14981, 
+            "id": "10166484824", 
+            "lat": 33.89279
+        }
+    },
+    {
+        "crosswalk":
+        {
+            "footway": "crossing", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "1111062736", 
+            "highway": "footway", 
+            "crossing": "marked"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.14857, 
+            "id": "10166484826", 
+            "lat": 33.89015
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.14854, 
+            "id": "5447124244", 
+            "lat": 33.89015,
+            "traffic_calming": "hump"
+        }
+    },
+    {
+        "crosswalk":
+        {
+            "footway": "crossing", 
+            "__datasetid": "33.8N84.2W", 
+            "id": "1111062737", 
+            "highway": "footway", 
+            "crossing": "marked"
+        },
+        "node1":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.14854, 
+            "id": "5447124244", 
+            "lat": 33.89015,
+            "traffic_calming": "hump"
+        },
+        "node2":
+        {
+            "__datasetid": "33.8N84.2W", 
+            "lon": -84.148476, 
+            "id": "5447124245", 
+            "lat": 33.890167
+        }
+    }
+]
