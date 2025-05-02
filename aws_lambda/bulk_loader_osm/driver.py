@@ -18,13 +18,13 @@ def coroutine(func):
     return start
 
 
-def main(infile, dataset_id="area-unset"):
+def main(infile, dataset_id="area-unset", ignore_tags=False):
 
     @coroutine
     def printer():
         while True:
             event = yield
-            print(event)
+            # print(event)
 
     # send data to AWS S3 for Bulk Load
     AWSBulkLoadObj = AWSBulkLoad()
@@ -39,7 +39,7 @@ def main(infile, dataset_id="area-unset"):
                 
 
     # parse and send data to a graph database
-    xml.sax.parse(infile, OsmDataHandler(printer(), querywriter(), dataset_id))
+    xml.sax.parse(infile, OsmDataHandler(printer(), querywriter(), dataset_id, ignore_tags))
 
     return
 

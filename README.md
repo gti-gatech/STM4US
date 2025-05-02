@@ -1,6 +1,6 @@
-# <a name="STM4US"></a>STM4US
+# <a name="its4us"></a>ITS4US
 
-STM4US is a program that aims to solve mobility challenges for all travelers with a specific focus on underserved communities, including people with physical or cognitive disabilities, older adults, low-income individuals, and LEP travelers. This program seeks to enable communities to build local partnerships, develop and deploy integrated and replicable mobility solutions to achieve complete trips for all travelers.
+ITS4US is a program aims to solve mobility challenges for all travelers with a specific focus on underserved communities, including people with physical or cognitive disabilities, older adults, low-income individuals, and LEP travelers. This program seeks to enable communities to build local partnerships, develop and deploy integrated and replicable mobility solutions to achieve complete trips for all travelers.
 
 ## <a name="installing_getting_started"></a>Installing / Getting Started - AWS
 ### <a name="setting_up_aws"></a>Setting up AWS
@@ -180,11 +180,11 @@ More on Neo4j openCypher queries:
 
 ## <a name="test_neo4j_queries"></a>Test Neo4j queries in Python with local server
 
-To test the OpenStreetMap (OSM) parser [osm_sax_python.py] and the openCypher queries on [query_writer.py], a small test file [test.osm] is used, and the Neo4j local server that is set up from above could be used to test the code locally using [driver.py]:
+To test the OpenStreetMap (OSM) parser [osm_sax_python.py](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/osm_sax_python.py) and the openCypher queries on [query_writer.py](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/query_writer.py), a small test file [test.osm](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/test.osm) is used, and the Neo4j local server that is set up from above could be used to test the code locally using [driver.py](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/driver.py):
 
 0. Make sure Neo4j local server is installed and running by following the steps in the "Install and start a local Neo4j server" section above
 1. Run `conda activate its4us`
-2. Run the following line to add nodes and links from the test file [test.osm] to the `neo4j` local database:
+2. Run the following line to add nodes and links from the test file [test.osm](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/test.osm) to the `neo4j` local database:
 
         python3 /<root_directory>/parser/osm/sax_python/driver.py local test.osm test1 -u neo4j -p <password>
 
@@ -226,7 +226,7 @@ With a Neptune Database initialized, follow the AWS documentation to set up an E
 
 ## <a name="connect_neptune_local"></a>Add nodes to AWS Neptune database from local
 
-With the connection set up by following the steps in the section above, nodes such as OSM nodes can be added to the AWS Neptune database by running [driver.py] locally:
+With the connection set up by following the steps in the section above, nodes such as OSM nodes can be added to the AWS Neptune database by running [driver.py](https://git2.icl.gtri.org/projects/ITS4US/repos/general/browse/parser/osm/sax_python/driver.py) locally:
 
 1. Open a new Terminal and run `conda activate its4us`
 2. Execute the script `driver.py` in the repo to add some nodes to the database for testing purposes: 
@@ -416,6 +416,44 @@ Currently two AWS Lambda Functions are set up for the NaviGAtor events data:
         * NaviGAtor scheduled and unscheduled events nodes and relationships are paused to be ingested to AWS Neptune <stage> database
 
    A scheduler called `navigator-scheduler-delete` is also created to delete NaviGAtor event nodes and relationships that are 15 minutes older or have not been modified for the last 15 minutes in the Neptune <stage> database.
+
+
+## <a name="stm_pmd_calculate_api"></a> STM Performance Metric Data (PMD) Calculations API
+
+STM-based performance metrics are computed from the data on GMAP mobile application in JSON file format that are uploaded to AWS S3 bucket `<TBD>` on weekly basis. The following metrics are currently calculated from the AWS Lambda function called `calculate-performance-metrics` on each day of the requested week:
+
+* Unique users count
+* Trips requested count
+* Completed trips count
+* Abandoned trips count
+* Trips deviated count
+* Trips deviated at intersections count
+* Fixed transit used count
+* Aggregated or average counts of above metrics for past 7 days from the current day
+
+The resulting metrics are saved to a JSON file called `PMD_<YYYY-MM-DD>_<YYYY-MM-DD>.json` for the requested week range starting on a Monday and ending on a Sunday. The file is then uploaded to the public S3 bucket for file access.
+
+UPDATED on 08/23/24:
+Currently only the aggregated metrics are saved and uploaded to the S3 bucket inside a json file named Weekly_PMD.json, and individual metric on each day is not saved. For example, the following json contains the aggregated metrics for two weeks of PMD data:
+
+        [{"date": "2024-04-29_2024-05-05", "total trips requested": 21, "average unique users": 5.0, "total trips completed": 14, "total trips abandoned": 7, "average trips deviated": 3.0, "average trips deviated at intersection": 1.0, "average fixed transit used": 0.0},
+        {"date": "2024-05-06_2024-05-12", "total trips requested": 22, "average unique users": 10.0, "total trips completed": 12, "total trips abandoned": 10, "average trips deviated": 5.0, "average trips deviated at intersection": 2.0, "average fixed transit used": 3.0}]
+
+To run the computation manually, a *POST* API is set up as follows:
+
+        curl -v -X POST 'https://<api-id>.execute-api.<region>.amazonaws.com/<stage>/api/pmd/calculate' -H 'Content-Type:application/json' -H 'Authorization:<password>'
+
+where the PMD metrics are computed based on last week's data of the current run day. The optional parameter `week` can be specified by users as follows:
+
+        curl -v -X POST 'https://<api-id>.execute-api.<region>.amazonaws.com/<stage>/api/pmd/calculate?week=20240429' -H 'Content-Type:application/json' -H 'Authorization:<password>'
+
+if users wished to compute the metrics based a certain week of the data in the past. The `week` value is assumed to be a Monday, but the current implementation could handle the value to be any day. If users accidentally specifies the value of the `week` that is in the future, PMD metrics will be computed based on last week's data of the current run day. 
+
+During the computation if a day's data could not be found on the S3 bucket `<TBD>` for the PMD calculation, an exception handler handles the file not found error and continues the calculation for the remaining data. The computed metrics for the run may not be accurate and a warning message is recorded on the logs for the incident.
+
+Note that only *POST* is currently supported.
+
+A AWS EventBridge scheduler named `pmd-scheduler` is set up to execute the Lambda function `calculate-performance-metrics` on Monday at 1 am EST/EDT each week. It is assumed that the data from GMAP have been upload to S3 `<TBD>` by then to calculate the PMD metrics for the past week's performance.
 
 
 ## <a name="sidewalksim_data_api"></a> SidewalkSim Data API

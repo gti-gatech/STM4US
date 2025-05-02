@@ -5,52 +5,14 @@ import pandas as pd
 from neo4j import GraphDatabase, RoutingControl
 import datetime
 import boto3
-
-impedanceBranchKeys = {
-    'GT/CE-SIDEWALK-DEFECT': 'DEFECT',
-    'GT/CE-SIDEWALK-RAMP': 'RAMP',
-    'GT/CE-SIDEWALK-CURB': 'CURB',
-    'GT/CE-SIDEWALK-CURB-CUT': 'CUT',
-    'GT/CE-SIDEWALK-CROSSING': 'CROSS',
-    'GT/CE-SIDEWALK-BUS-STOP': 'BUSS'
-}
+from time import time
 
 numTravelTypes = -18
 
-def filter_constraints(row,node,branch):
-    if not branch:
-        cur_effects = set(str(row['Impedance Effect Type']).split(';'))
-        all_effects = impedanceBranchKeys.values()
-        if cur_effects.intersection(all_effects):
-            return False
-
-    if row['Variable Name'] in node.keys():
-        constraints = str(row['Constraints']).split(';')
-        lower = row['Lower Bound']
-        upper = row['Upper Bound']
-
-        if 'nan' in constraints:
-            if (node[row['Variable Name']] == row['Enumeration']):
-                print(row['Variable Name'],constraints)
-                return True
-            else:
-                return False
-        elif 'INB' in constraints and (float(node[row['Variable Name']]) > lower) and (float(node[row['Variable Name']]) < upper):
-            return True
-        elif 'INBX' in constraints and (float(node[row['Variable Name']]) >= lower) and (float(node[row['Variable Name']]) <= upper):
-            return True
-        elif 'OUTB' in constraints and (float(node[row['Variable Name']]) < lower) or (float(node[row['Variable Name']]) > upper):
-            return True
-        elif 'OUTBX' in constraints and (float(node[row['Variable Name']]) <= lower) or (float(node[row['Variable Name']]) >= upper):
-            return True
-        else:
-            return False
-    return False
-
 def lambda_handler(event, context):
-
+    print("Start:",time())
     id = event['queryStringParameters']['id']
-    
+
     LOADER_URL = event['stageVariables']['LOADER_URL']
     QUERY_URL = event['stageVariables']['QUERY_URL']
     LOAD_BUCKET = event['stageVariables']['LOAD_BUCKET']
@@ -58,213 +20,136 @@ def lambda_handler(event, context):
     PUBLIC_BUCKET = event['stageVariables']['PUBLIC_BUCKET']
 
     AUTH = ("username", "password") # not used
+    env = event['requestContext']['stage']
+    if 'testWaze' in event['queryStringParameters'] and event['queryStringParameters']['testWaze'] == 1:
+        testWaze = True
+    else:
+        testWaze = False
 
-    print("Starting driver")
+    print("Reading csv:",time())
+
+    factors = pd.read_csv('factors.csv', na_values='NA')
+    travelTypes = factors.columns.tolist()[numTravelTypes:]
+    ct = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    print("Querying database:",time())
+
     with GraphDatabase.driver(QUERY_URL, auth=AUTH, encrypted=True) as driver:
-        # print("Creating sidewalk query")
-        # query = "MATCH (s:`GT/CE-SIDEWALK`)-[:`NODE-A`]->(na), (s)-[:`NODE-B`]->(nb) WHERE s.`__datasetid` = '{}' RETURN s,ID(na),ID(nb)".format(id)
+        print("Creating sidewalk query")
+        query = "MATCH (na)-[s:`BASE-IMPEDANCE`]->(nb) WHERE s.`__datasetid` = '{}' RETURN ".format(id)
+        query += ",".join(["s.`{0}` as `{0}`".format(travelType) for travelType in travelTypes])
+        query += ",s.stmAdaPathLinkLength as stmAdaPathLinkLength,s.stmAdaPathLinkID as stmAdaPathLinkID,ID(na),ID(nb)"
         # print(query)
         # print("executing query")
-        # sidewalks, _, _ = driver.execute_query(query)
+        baseImpedance, _, _ = driver.execute_query(query)
 
-        # print("Creating branched impedance query")
-        # query = "MATCH (s:`GT/CE-SIDEWALK`)-[l]->(n) WHERE n:`GT/CE-SIDEWALK-DEFECT` OR n:`GT/CE-SIDEWALK-RAMP` OR n:`GT/CE-SIDEWALK-CURB` "
-        # query += "OR n:`GT/CE-SIDEWALK-CURB-CUT` OR n:`GT/CE-SIDEWALK-CROSSING` OR n:`GT/CE-SIDEWALK-BUS-STOP` RETURN s,n,labels(n)"
-        # print(query)
-        # print("executing query")
-        # impedanceBranched, _, _ = driver.execute_query(query)
-
-        print("Creating branched impedance query")
-        query = "MATCH (way:`OSM-WAY`)-[r:`WAZE-ALERT`]->(waze:`WAZE-ALERT`) "
-        query += " RETURN way.id,r.__impedance_factor,r.__impedance_effect_type"
-        print(query)
-        print("executing query")
-        waze, _, _ = driver.execute_query(query)
-        wayIds = [record.data()['way.id'] for record in waze]
-        wayIdsString = json.dumps(wayIds)
-        query = "MATCH (na:`OSM-NODE`)-[l:`WAY`]->(nb:`OSM-NODE`) where l.`way-id` in {} ".format(wayIdsString)
-        query += " RETURN l.`way-id`,ID(na),ID(nb)"
-        print(query)
-        print("executing query")
-        wazeNodes, _, _ = driver.execute_query(query)
-
-        # print("Creating impedance query")
-        # query = "MATCH (a)-[l:IMPEDANCE]->(b) WHERE l.`__datasetid` = '{}' RETURN a".format(id)
-        # print(query)
-        # print("executing query")
-        # impedance, _, _ = driver.execute_query(query)
+        if not testWaze:
+            print("Creating waze query")
+            query = "MATCH (way:`OSM-WAY`)-[r:`WAZE-ALERT`]->(waze:`WAZE-ALERT`) "
+            query += " RETURN way.id as stmAdaPathLinkID,r.__impedance_factor as factor,r.__impedance_effect_type as type"
+            # print(query)
+            # print("executing query")
+            waze, _, _ = driver.execute_query(query)
 
         print("Finished query execution")
 
-    csv = pd.read_csv('factors.csv', na_values='NA')
+    if testWaze:
+        print("Testing waze")
+        waze_df = pd.read_csv('testWaze.csv', na_values='NA')
+    else:
+        waze_dict = [record.data() for record in waze]
+        waze_df = pd.DataFrame(waze_dict)
 
-    travelTypes = csv.columns.tolist()[numTravelTypes:]
-    speeds = csv[travelTypes].iloc[0]
+    ##################################################################
+    # Calculate impedance    
 
-    dataA_B = csv[~csv["Variable Name"].str.contains("B_A", na = True)]
-    dataB_A = csv[~csv["Variable Name"].str.contains("A_B", na = True)]
+    print("Creating factor tables:",time())
+
+    base_impedance_dict = [record.data() for record in baseImpedance]
+    base_impedance_df = pd.DataFrame(base_impedance_dict)
+    base_impedance_df['stmAdaPathLinkID'] = base_impedance_df['stmAdaPathLinkID'].astype('int').astype('str')
+    base_impedance_df[travelTypes] = base_impedance_df[travelTypes].astype('float')
+
+    print("Creating waze tables:",time())
+
+    waze_df['stmAdaPathLinkID'] = waze_df['stmAdaPathLinkID'].astype('int').astype('str')
+    waze_df['factor'] = waze_df['factor'].astype('float')
+
+    if not waze_df.empty:
+        waze_df[travelTypes] = pd.DataFrame([waze_df['factor'].values for travelType in travelTypes]).T
+        mul_waze = waze_df[waze_df['type'] == 'MUL'].groupby('stmAdaPathLinkID', as_index=False).prod(numeric_only=True)
+        add_waze = waze_df[waze_df['type'] == 'ADD'].groupby('stmAdaPathLinkID', as_index=False).sum(numeric_only=True)
+    else:
+        mul_waze = pd.DataFrame(columns=['stmAdaPathLinkID'])
+        add_waze = pd.DataFrame(columns=['stmAdaPathLinkID'])
+
+    # print("waze tables")
+    # print(mul_waze)
+    # print(add_waze)
+
+    def apply_factors(row):    
+        filtered_mul_waze = mul_waze[mul_waze['stmAdaPathLinkID']==row['stmAdaPathLinkID']].reset_index()
+        if not filtered_mul_waze.empty:
+            print(mul_waze[mul_waze['stmAdaPathLinkID']==row['stmAdaPathLinkID']].reset_index().iloc[0][travelTypes])
+            print(row[travelTypes])
+            row[travelTypes] = row[travelTypes] * mul_waze[mul_waze['stmAdaPathLinkID']==row['stmAdaPathLinkID']].reset_index().iloc[0][travelTypes]
+        filtered_add_waze = add_waze[add_waze['stmAdaPathLinkID']==row['stmAdaPathLinkID']].reset_index()
+        if not filtered_add_waze.empty:
+            row[travelTypes] = row[travelTypes] + add_waze[add_waze['stmAdaPathLinkID']==row['stmAdaPathLinkID']].reset_index().iloc[0][travelTypes]
+
+        return row
+
+    print("Filtering sidewalks:",time())
+
+    impedance = base_impedance_df.apply(apply_factors, axis='columns')
     
-    multiplierDataA_B = dataA_B[dataA_B['Impedance Effect Type'].str.contains("MUL", na = False)]
-    multiplierDataB_A = dataB_A[dataB_A['Impedance Effect Type'].str.contains("MUL", na = False)]
-    addDataA_B = dataA_B[dataA_B['Impedance Effect Type'].str.contains("ADD", na = False)]
-    addDataB_A = dataB_A[dataB_A['Impedance Effect Type'].str.contains("ADD", na = False)]
+    ##################################################################
+    # Format and upload
     
+    print("Creating outputs:",time())
+    impedance = impedance.rename(columns={
+            'stmAdaPathLinkID':'stmAdaPathLinkID:String(single)',
+            'stmAdaPathLinkLength':'stmAdaPathLinkLength:String(single)',
+            'ID(na)':'~from',
+            'ID(nb)':'~to'
+        } | {travelType: travelType+":String(single)" for travelType in travelTypes})
 
-    ct = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    impedance = impedance.astype({'stmAdaPathLinkID:String(single)': 'int32'})
+    impedance = impedance.astype({
+        'stmAdaPathLinkID:String(single)': 'str',
+        '~from': 'str',
+        '~to': 'str'
+        })
 
-    # impedanceFile = open("/tmp/impedance_calculation.csv", "w")
-    # impedanceFile.write("~id,~from,~to,~label,__datasetid:String(single),Timestamp:String(single),None:String(single),Some:String(single),Device:String(single),WChairM:String(single),WChairE:String(single),MScooter:String(single),Vision:String(single),Vision+:String(single),Some-Vision:String(single),Device-Vision:String(single),WChairM-Vision:String(single),WChairE-Vision:String(single),MScooter-Vision:String(single),Some-Vision+:String(single),Device-Vision+:String(single),WChairM-Vision+:String(single),WChairE-Vision+:String(single),MScooter-Vision+:String(single)\n")
+    impedance['~id']   = 'i' + impedance['stmAdaPathLinkID:String(single)'].astype('str') + '-' + impedance['~from'].astype('str') + '-' + impedance['~to'].astype('str')
+    impedance['~label'] = 'IMPEDANCE'
+    impedance['__datasetid:String(single)'] = id
+    impedance['Timestamp:String(single)'] = ct
+    impedance = impedance.drop(impedance[impedance['~id'] == 'i0-0-0'].index)
+    impedance = impedance.drop(impedance[impedance['~from'].astype('str') == ''].index)
+    impedance = impedance.drop(impedance[impedance['~to'].astype('str') == ''].index)
+    impedance = impedance.drop(impedance[impedance['~from'].astype('str') == '0'].index)
+    impedance = impedance.drop(impedance[impedance['~to'].astype('str') == '0'].index)
 
-    ## impedanceBranchDict = {
-    ##   <sidewalkID>: {
-    ##       'GT/CE-SIDEWALK-DEFECT': [node1,node2],
-    ##       'GT/CE-SIDEWALK-RAMP': [node3,node4],
-    ##       'GT/CE-SIDEWALK-CURB': [],
-    ##       'GT/CE-SIDEWALK-CURB-CUT': [node5],
-    ##       'GT/CE-SIDEWALK-CROSSING': [],
-    ##       'GT/CE-SIDEWALK-BUS-STOP': []
-    ##   },
-    ##   <sidewalkID>: {...},
-    ## }
-
-    # impedanceBranchDict = {}
-    # for record in impedanceBranched:
-    #     sidewalk = record.data()['s']
-    #     if sidewalk['sidewalksimLinkID'] not in impedanceBranchDict:
-    #         impedanceBranchDict[sidewalk['sidewalksimLinkID']] = {key:[] for key in impedanceBranchKeys.keys()}
-    #     impedanceBranchDict[sidewalk['sidewalksimLinkID']][record.data()['labels(n)'][0]].append(record.data()['n'])
-
-    wazeDict = {
-        record.data()['way.id']:{
-            'factor':record.data()['r.__impedance_factor'],
-            'type':record.data()['r.__impedance_effect_type']
-        }
-    for record in waze}
-
-    # wazeNodesDict = {
-    #     frozenset([record.data()['ID(na)'],record.data()['ID(nb)']]):record.data()['l.way-id']
-    # for record in wazeNodes}
-
-    # for record in sidewalks:
-    #     sidewalk = record.data()['s']
-    #     lengths = pd.Series([sidewalk['stmPedLinkLength'] for type in travelTypes], dtype='float64',index=travelTypes)
-    #     baseImpedance = lengths/speeds
-
-    #     # A to B
-    #     multipliersA_B = multiplierDataA_B[multiplierDataA_B.apply(filter_constraints,args=(sidewalk,False),axis='columns')]
-    #     multipliersA_B = multipliersA_B[travelTypes].prod(axis=0)
-
-    #     # addsA_B = addDataA_B[addDataA_B.apply(filter_constraints,args=(sidewalk,False),axis='columns')]
-    #     # addsA_B = addsA_B[travelTypes].sum(axis=0)
-
-    #     # B to A
-    #     multipliersB_A = multiplierDataB_A[multiplierDataB_A.apply(filter_constraints,args=(sidewalk,False),axis='columns')]
-    #     multipliersB_A = multipliersB_A[travelTypes].prod(axis=0)
-
-    #     # addsB_A = addDataB_A[addDataB_A.apply(filter_constraints,args=(sidewalk,False),axis='columns')]
-    #     # addsB_A = addsB_A[travelTypes].sum(axis=0)
-        
-    #     # multipliersBranchesA_B = pd.DataFrame(columns=travelTypes)
-    #     # multipliersBranchesB_A = pd.DataFrame(columns=travelTypes)
-    #     addsBranchesA_B = pd.DataFrame(columns=travelTypes)
-    #     addsBranchesB_A = pd.DataFrame(columns=travelTypes)
-
-    #     if sidewalk['sidewalksimLinkID'] in impedanceBranchDict:
-    #         for branchKey,branchList in impedanceBranchDict[sidewalk['sidewalksimLinkID']].items():
-    #             if branchList:
-    #                 # multBranchDataA_B = multiplierDataA_B[multiplierDataA_B['Impedance Effect Type'].str.contains(impedanceBranchKeys[branchKey], na = False)]
-    #                 # multBranchDataB_A = multiplierDataB_A[multiplierDataB_A['Impedance Effect Type'].str.contains(impedanceBranchKeys[branchKey], na = False)]
-    #                 addBranchDataA_B = addDataA_B[addDataA_B['Impedance Effect Type'].str.contains(impedanceBranchKeys[branchKey], na = False)]
-    #                 addBranchDataB_A = addDataB_A[addDataB_A['Impedance Effect Type'].str.contains(impedanceBranchKeys[branchKey], na = False)]
-
-    #                 for branch in branchList:
-    #                     # constrainedMultBranchDataA_B = multBranchDataA_B[multBranchDataA_B.apply(filter_constraints,args=(branch,True),axis='columns')]
-    #                     # constrainedMultBranchDataA_B = constrainedMultBranchDataA_B[travelTypes].prod(axis=0)
-    #                     # multipliersBranchesA_B = pd.concat([multipliersBranchesA_B,constrainedMultBranchDataA_B])
-
-    #                     # constrainedMultBranchDataB_A = multBranchDataB_A[multBranchDataB_A.apply(filter_constraints,args=(branch,True),axis='columns')]
-    #                     # constrainedMultBranchDataB_A = constrainedMultBranchDataB_A[travelTypes].prod(axis=0)
-    #                     # multipliersBranchesB_A = pd.concat([multipliersBranchesB_A,constrainedMultBranchDataB_A])
-
-    #                     constrainedAddsBranchDataA_B = addBranchDataA_B[addBranchDataA_B.apply(filter_constraints,args=(branch,True),axis='columns')]
-    #                     constrainedAddsBranchDataA_B = constrainedAddsBranchDataA_B[travelTypes].sum(axis=0)
-    #                     addsBranchesA_B = pd.concat([addsBranchesA_B,constrainedAddsBranchDataA_B.to_frame().T],ignore_index=True)
-
-    #                     constrainedAddsBranchDataB_A = addBranchDataB_A[addBranchDataB_A.apply(filter_constraints,args=(branch,True),axis='columns')]
-    #                     constrainedAddsBranchDataB_A = constrainedAddsBranchDataB_A[travelTypes].sum(axis=0)
-    #                     addsBranchesB_A = pd.concat([addsBranchesB_A,constrainedAddsBranchDataB_A.to_frame().T],ignore_index=True)
-
-    #     # multipliersBranchesA_B = multipliersBranchesA_B[travelTypes].prod(axis=0)
-    #     # multipliersBranchesB_A = multipliersBranchesB_A[travelTypes].prod(axis=0)
-    #     addsBranchesA_B = addsBranchesA_B[travelTypes].sum(axis=0)
-    #     addsBranchesB_A = addsBranchesB_A[travelTypes].sum(axis=0)
-    #     # totalImpedanceA_B = baseImpedance*multipliersA_B*multipliersBranchesA_B + addsA_B + addsBranchesA_B
-    #     # totalImpedanceB_A = baseImpedance*multipliersB_A*multipliersBranchesB_A + addsB_A + addsBranchesB_A
-
-    #     na = record.data()['ID(na)']
-    #     nb = record.data()['ID(nb)']
-
-    #     if frozenset(na,nb) in wazeNodesDict:
-    #         impedance = wazeDict[wazeNodesDict[frozenset(na,nb)]]
-    #         if impedance['type'] == 'ADD':
-    #             addsBranchesA_B += impedance['factor']
-    #             addsBranchesB_A += impedance['factor']
-    #         elif impedance['type'] == 'MUL':
-    #             multipliersA_B *= impedance['factor']
-    #             multipliersB_A *= impedance['factor']
-        
-    #     totalImpedanceA_B = baseImpedance*multipliersA_B + addsBranchesA_B
-    #     totalImpedanceB_A = baseImpedance*multipliersB_A + addsBranchesB_A
-
-    #     row = "in{0}-n{1},{0},{1},IMPEDANCE,{2},{3},".format(na,nb,id,ct) + ",".join([string[:6] for string in totalImpedanceA_B.astype(str).tolist()]) + "\n"
-    #     impedanceFile.write(row)
-    #     row = "in{0}-n{1},{0},{1},IMPEDANCE,{2},{3},".format(nb,na,id,ct) + ",".join([string[:6] for string in totalImpedanceB_A.astype(str).tolist()]) + "\n"
-    #     impedanceFile.write(row)
-
-    sidewalks = pd.read_csv('sidewalks.csv', na_values='NA')
-    sidewalks['Timestamp:String(single)'] = ct
-
-    dataCols = [
-            'None:String(single)',
-            'Some:String(single)',
-            'Device:String(single)',
-            'WChairM:String(single)',
-            'WChairE:String(single)',
-            'MScooter:String(single)',
-            'LowVision:String(single)',
-            'Blind:String(single)',
-            'Some-LowVision:String(single)',
-            'Device-LowVision:String(single)',
-            'WChairM-LowVision:String(single)',
-            'WChairE-LowVision:String(single)',
-            'MScooter-LowVision:String(single)',
-            'Some-Blind:String(single)',
-            'Device-Blind:String(single)',
-            'WChairM-Blind:String(single)',
-            'WChairE-Blind:String(single)',
-            'MScooter-Blind:String(single)']
-
-    for wayId,impedanceData in wazeDict.items():
-        mul = 1
-        add = 0
-        if impedanceData['type'] == 'ADD':
-            add = impedanceData['factor']
-        elif impedanceData['type'] == 'MUL':
-            mul = impedanceData['factor']
-        sidewalks.loc[sidewalks['stmAdaPathLinkID:String(single)'] == int(wayId), dataCols] = sidewalks[dataCols].multiply(mul).add(add)
+    impedance = impedance[['~id',
+        '~from',
+        '~to',
+        '~label',
+        '__datasetid:String(single)',
+        'Timestamp:String(single)',
+        'stmAdaPathLinkID:String(single)',
+        'stmAdaPathLinkLength:String(single)']+[travelType+":String(single)" for travelType in travelTypes]]
     
-    cols = list(sidewalks)
-    cols[2], cols[1] = cols[1], cols[2]
-    sidewalksB_A = sidewalks.loc[:,cols]
-    cols[2], cols[1] = cols[1], cols[2]
-    sidewalksB_A.columns = cols
-    sidewalksB_A['~id'] = 'i' + sidewalksB_A['~to'] + '-' + sidewalksB_A['~from']
-    
-    sidewalks = pd.concat([sidewalks,sidewalksB_A])
-    
-    sidewalks.to_csv("/tmp/impedance_calculation.csv",index=False)
-    
-    # impedanceFile.close()
+    # # Add reverse direction
+    # cols = list(impedance)
+    # cols[2], cols[1] = cols[1], cols[2]
+    # impedanceB_A = impedance.loc[:,cols]
+    # cols[2], cols[1] = cols[1], cols[2]
+    # impedanceB_A.columns = cols
+    # impedanceB_A['~id'] = 'i' + impedance['stmAdaPathLinkID:String(single)'].astype('str') + '-' + impedanceB_A['~from'].astype('str') + '-' + impedanceB_A['~to'].astype('str')
+    # impedance = pd.concat([impedance,impedanceB_A])
+
+    impedance.to_csv("/tmp/impedance_calculation.csv",index=False,float_format='%.2f')
     s3 = boto3.client('s3')
     s3.upload_file("/tmp/impedance_calculation.csv", LOAD_BUCKET, "impedance_calculation/impedance_calculation.csv")
 
@@ -282,46 +167,45 @@ def lambda_handler(event, context):
 
     bulkLoad_response = requests.post(LOADER_URL, json=bulkLoad_json)
 
-    sidewalks = sidewalks[[
-        'Timestamp:String(single)',
-        '~from',
-        '~to',
-        'stmAdaPathLinkID:String(single)',
-        'stmAdaPathLinkLength:String(single)',
-    ] + dataCols]
-    
-    sidewalks = sidewalks.rename(columns={
-        'Timestamp:String(single)': 'Timestamp',
-        '~from': 'Upstream Node',
-        '~to': 'Downstream Node',
-        'stmAdaPathLinkID:String(single)': 'Way Id',
-        'stmAdaPathLinkLength:String(single)': 'Link Length',
-        'None:String(single)': 'None',
-        'Some:String(single)': 'Some',
-        'Device:String(single)': 'Device',
-        'WChairM:String(single)': 'WChairM',
-        'WChairE:String(single)': 'WChairE',
-        'MScooter:String(single)': 'MScooter',
-        'LowVision:String(single)': 'LowVision',
-        'Blind:String(single)': 'Blind',
-        'Some-LowVision:String(single)': 'Some-LowVision',
-        'Device-LowVision:String(single)': 'Device-LowVision',
-        'WChairM-LowVision:String(single)': 'WChairM-LowVision',
-        'WChairE-LowVision:String(single)': 'WChairE-LowVision',
-        'MScooter-LowVision:String(single)': 'MScooter-LowVision',
-        'Some-Blind:String(single)': 'Some-Blind',
-        'Device-Blind:String(single)': 'Device-Blind',
-        'WChairM-Blind:String(single)': 'WChairM-Blind',
-        'WChairE-Blind:String(single)': 'WChairE-Blind',
-        'MScooter-Blind:String(single)': 'MScooter-Blind'
-    })
-    
-    sidewalks['Upstream Node'] = sidewalks['Upstream Node'].str[1:]
-    sidewalks['Downstream Node'] = sidewalks['Downstream Node'].str[1:]
-    
-    sidewalks.to_csv("/tmp/impedance_export.csv",index=False)
-    
-    s3.upload_file("/tmp/impedance_export.csv", PUBLIC_BUCKET, "impedance_export.csv")
+    if env == "prod":
+        impedance = impedance[[
+            'Timestamp:String(single)',
+            '~from',
+            '~to',
+            'stmAdaPathLinkID:String(single)',
+            'stmAdaPathLinkLength:String(single)']+[travelType+":String(single)" for travelType in travelTypes]]
+        impedance = impedance.rename(columns={
+            'Timestamp:String(single)': 'Timestamp',
+            '~from': 'Upstream Node',
+            '~to': 'Downstream Node',
+            'stmAdaPathLinkID:String(single)': 'Way Id',
+            'stmAdaPathLinkLength:String(single)': 'Link Length',
+            'None:String(single)': 'None',
+            'Some:String(single)': 'Some',
+            'Device:String(single)': 'Device',
+            'WChairM:String(single)': 'WChairM',
+            'WChairE:String(single)': 'WChairE',
+            'MScooter:String(single)': 'MScooter',
+            'LowVision:String(single)': 'LowVision',
+            'Blind:String(single)': 'Blind',
+            'Some-LowVision:String(single)': 'Some-LowVision',
+            'Device-LowVision:String(single)': 'Device-LowVision',
+            'WChairM-LowVision:String(single)': 'WChairM-LowVision',
+            'WChairE-LowVision:String(single)': 'WChairE-LowVision',
+            'MScooter-LowVision:String(single)': 'MScooter-LowVision',
+            'Some-Blind:String(single)': 'Some-Blind',
+            'Device-Blind:String(single)': 'Device-Blind',
+            'WChairM-Blind:String(single)': 'WChairM-Blind',
+            'WChairE-Blind:String(single)': 'WChairE-Blind',
+            'MScooter-Blind:String(single)': 'MScooter-Blind'
+        })
+        
+        impedance['Upstream Node'] = impedance['Upstream Node'].str[1:]
+        impedance['Downstream Node'] = impedance['Downstream Node'].str[1:]
+        
+        impedance.to_csv("/tmp/impedance_export.csv",index=False,float_format='%.2f')
+        
+        s3.upload_file("/tmp/impedance_export.csv", PUBLIC_BUCKET, "impedance_export.csv")
 
     return {
         'statusCode': 200,

@@ -1,344 +1,340 @@
-﻿Variable Name,Variable Description,Format,Units,Enumeration,Impedance Effect Type,Constraints,Lower Bound,Upper Bound,Calculation Notes (will be removed),None,Some,Device,WChairM,WChairE,MScooter,LowVision,Blind,Some-LowVision,Device-LowVision,WChairM-LowVision,WChairE-LowVision,MScooter-LowVision,Some-Blind,Device-Blind,WChairM-Blind,WChairE-Blind,MScooter-Blind
-ADA Mobility Mode Speed,Speed of ADA Mobility Mode (mph),NUMERIC,Miles/Hour,NA,NA,,,,NA,2.50,2.00,1.50,3.00,4.00,5.00,2.00,1.50,2.00,1.50,3.00,4.00,4.00,2.00,1.50,2.00,1.50,3.00
-stmPedLinkWidth,Link width,NUMERIC,Inches,NA,MUL,INBX,0,30,"Multiply base time by value if <30""",1.20,1.20,1.20,2.00,2.00,2.00,1.20,1.20,1.20,1.20,2.00,2.00,2.00,1.20,1.20,2.00,2.00,2.00
-stmPedLinkWidth,Link width,NUMERIC,Inches,NA,MUL,INBX,0,30,"Multiply base time by value if <30""",1.20,1.20,1.20,2.00,2.00,2.00,1.20,1.20,1.20,1.20,2.00,2.00,2.00,1.20,1.20,2.00,2.00,2.00
-stmPedLinkSlopeA_B,Link slope in direction A-B,NUMERIC,Degrees (decimal),NA,MUL,INBX,3,5,Multiply base time by value if >3,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkSlopeA_B,Link slope in direction A-B,NUMERIC,Degrees (decimal),NA,MUL,OUTBX,,5,Multiply base time by value if >5,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmPedLinkSlopeB_A,Link slope in direction B-A,NUMERIC,Degrees (decimal),NA,MUL,INBX,3,5,Multiply base time by value if >3,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkSlopeB_A,Link slope in direction B-A,NUMERIC,Degrees (decimal),NA,MUL,OUTBX,,5,Multiply base time by value if >5,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated,Concrete (Smooth),MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Concrete (Rough),MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Asphalt,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Brick,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Hexagonal Pavers,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Rectangular Pavers,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Cobblestone,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Plastic,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Wood,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Metal,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Gravel,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Grass,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Earth,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Sand,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Other,MUL,,,,Multiply base time by value if present,1.10,1.20,1.30,1.20,1.10,1.10,1.20,1.20,1.20,1.30,1.20,1.20,1.20,1.20,1.30,1.20,1.20,1.20
-stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated,Very Poor,MUL,,,,Multiply base time by value if present,1.00,1.20,1.20,1.30,1.10,1.10,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30
-stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Poor,MUL,,,,Multiply base time by value if present,1.00,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Good,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Very Good,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Excellent,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaType,Area type,TEXT,Enumerated,1=CBD/Very High Density Urban,MUL,,,,Multiply base time by value if present,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 2=High Density Urban,MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 3=Medium Density Urban,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 4=Low Density Urban,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 5=Suburban,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 6=Exurban,MUL,,,,Multiply base time by value if present,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30,1.30
-stmPedLinkAreaType,Area type,TEXT,Enumerated, 7=Rural,MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmPedLinkAreaResidentialDensity,Residential density,NUMERIC,per square-mile,,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaEmploymentDensity,Employment density,NUMERIC,per square-mile,,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaRestaurantDensity,Restaurant density,NUMERIC,per square-mile,,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaShoppingDensity,Shopping density,NUMERIC,per square-mile,,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAreaParkDensity,Public park/recreation area density,NUMERIC,per square-mile,,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Not Lighted,MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Minimally Lighted,MUL,,,,Multiply base time by value if present,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15
-stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Somewhat Lighted,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Mostly Lighted,MUL,,,,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
-stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Heavily Lighted,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated,Not Shaded,MUL,,,,Multiply base time by value if present,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15
-stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Minimally Shaded,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Somewhat Shaded,MUL,,,,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
-stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Mostly Shaded,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Heavily Shaded,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated,Centroid Connector,MUL,,,,Multiply base time by value if present,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00,999.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Interstate/Freeway,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Parkway,MUL,,,,Multiply base time by value if present,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00,2.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Buffer Separated,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Barrier Separated,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, High Speed Ramp/CD Road,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Medium Speed Ramp,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Low Speed Ramp,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Loop Ramp,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Off Ramp w/Intersection,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, On Ramp w/Intersection,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Expressway,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Principal Arterial Class I,MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Principal Arterial Class II,MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Arterial Class I,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Arterial Class II,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Arterial (all classes),MUL,,,,Multiply base time by value if present,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Major Collector,MUL,,,,Multiply base time by value if present,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Collector/Other Local,MUL,,,,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Planned Ramps w/Intersections,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Planned Directional Ramps,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link,MUL,,,,Multiply base time by value if present,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00,100.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Neighborhood Local,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Local Roads and Collectors,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Park-n-ride lot connector,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Transfer links between rail and bus,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Associated with BRT Routes,MUL,,,,Multiply base time by value if present,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkAadtA_B,Adjacent road AADT for direction A-B,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkAadtB_A,Adjacent road AADT for direction B-A,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkPercentHDTA_B,Percent heavy-duty trucks for direction A-B,NUMERIC,Percent,NA,MUL,INBX,3,6,Multiply base time by value if >3,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkPercentMDTA_B,Percent medium-duty trucks for direction A-B,NUMERIC,Percent,NA,MUL,OUTBX,,6,Multiply base time by value if >6,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkPercentHDTB_A,Percent heavy-duty trucks for direction B-A,NUMERIC,Percent,NA,MUL,INBX,3,6,Multiply base time by value if >3,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkPercentMDTB_A,Percent medium-duty trucks for direction B-A,NUMERIC,Percent,NA,MUL,OUTBX,,6,Multiply base time by value if >6,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkLanesA_B,Number of lanes for direction A-B,NUMERIC,NA,NA,MUL,OUTBX,,2,Multiply base time by value if >2,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkLanesB_A,Number of lanes for direction B-A,NUMERIC,NA,NA,MUL,OUTBX,,2,Multiply base time by value if >2,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20,1.20
-stmRoadLinkLaneWidthA_B,Average travel lane width,NUMERIC,Feet ,NA,MUL,OUTBX,,120,"Multiply base time by value if >120""",1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkLaneWidthB_A,Average travel lane width,NUMERIC,Feet ,NA,MUL,OUTBX,,120,"Multiply base time by value if >120""",1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkShoulderWidthA_B,Shoulder width for direction A-B,NUMERIC,Feet ,NA,MUL,OUTBX,,36,"Multiply base time by value if <36""",1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkShoulderWidthB_A,Shoulder width for direction B-A,NUMERIC,Feet ,NA,MUL,OUTBX,,36,"Multiply base time by value if <36""",1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkSpeedLimit,Posted speed limit,NUMERIC,MPH,NA,MUL,OUTBX,,29,Multiply base time by value if >29,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkObservedSpeed,Observed speed,NUMERIC,MPH,NA,MUL,OUTBX,,29,Multiply base time by value if >29,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10,1.10
-stmRoadLinkObservedPedestrianCount,Average daily count of sidewalk pedestrians,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkObservedCollisions,Traffic collisions,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkObservedInjuries,Injuries,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmRoadLinkObservedFatalities,Fatalities,NUMERIC,NA,NA,MUL,,,,Multiply base time by value if [condition TBD],1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmCrossingCrossingPathCrossSlope,Crossing path cross slope percent (must be <2% under ADA),NUMERIC,Percent,NA,MUL,,,,Additional multiplier for link if it's a crossing,1.00,1.00,1.10,1.20,1.00,1.00,1.10,1.10,1.20,1.20,1.20,1.20,1.20,1.00,1.10,1.20,1.00,1.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmAssetDefectReportProblemLinkWidth,Defect report sidewalk problem width narrowing,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkWidth,Defect report sidewalk problem width narrowing,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmAssetDefectReportProblemLinkDisjoint,Defect report sidewalk problem (surface) disjoint,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkDisjoint,Defect report sidewalk problem (surface) disjoint,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmAssetDefectReportProblemLinkPothole,Defect report sidewalk problem pothole,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkPothole,Defect report sidewalk problem pothole,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,0.75,0.50,0.50,0.50,0.50,0.75,0.75,0.75,0.75,0.75,0.50,0.50,0.75,0.50,0.50
-stmAssetDefectReportProblemLinkBlocked,Defect report sidewalk problem link is completely blocked,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkBlocked,Defect report sidewalk problem link is completely blocked,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,3.00,2.00,2.00,2.00,3.00,3.00,3.00,3.00,3.00,3.00,2.00,2.00,3.00,2.00,2.00
-stmAssetDefectReportProblemLinkObstruction,Defect report sidewalk problem partial obstruction,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkObstruction,Defect report sidewalk problem partial obstruction,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,1.00,1.00,0.50,0.25,0.25,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmAssetDefectReportProblemLinkDebris,Defect report sidewalk problem debris,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkDebris,Defect report sidewalk problem debris,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,1.00,1.00,0.50,0.25,0.25,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-stmAssetDefectReportProblemLinkWater,Defect report sidewalk problem standing water,TEXT,Enumerated,No Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmAssetDefectReportProblemLinkWater,Defect report sidewalk problem standing water,TEXT,Enumerated,Problem,ADD;DEFECT,,,,Add per Event (Unless Inspected Below),0.25,0.25,0.25,1.00,1.00,0.50,0.25,0.25,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00,1.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmRampType,Ramp type,TEXT,Enumerated,Standard Perpendicular Ramp,ADD;RAMP,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmRampType,Ramp type,TEXT,Enumerated, Diagonal Ramp,ADD;RAMP,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmRampType,Ramp type,TEXT,Enumerated, Parallel Ramp,ADD;RAMP,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmRampType,Ramp type,TEXT,Enumerated, Perpendicular Ramp with Return Edges,ADD;RAMP,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmRampType,Ramp type,TEXT,Enumerated, Combination Perpendicular Parallel Ramp,ADD;RAMP,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmRampType,Ramp type,TEXT,Enumerated, Combination Diagonal Parallel Ramp,ADD;RAMP,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmRampType,Ramp type,TEXT,Enumerated, Built-Up Ramp,ADD;RAMP,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmRampType,Ramp type,TEXT,Enumerated, Linear Ramp,ADD;RAMP,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmRampType,Ramp type,TEXT,Enumerated,At Grade,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWidth,Ramp width,NUMERIC,Inches,NA,ADD;RAMP,OUTBX,36,,"Add if less than 36""",0.00,0.10,0.20,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmRampSlope,Ramp slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,8.33,Add if greater than 8.33%,0.00,0.10,0.20,0.50,0.25,0.10,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmRampCrossSlope,Ramp cross slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmRampGutterSlope,Ramp gutter slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,0.5,Add if greater than 0.5%,0.00,0.00,0.00,0.50,0.25,0.00,0.00,0.00,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmRampPassingWidth,Ramp passing width,NUMERIC,Inches,NA,ADD;RAMP,OUTBX,,336,"Add if less than 36""",0.00,0.10,0.20,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmRampPassingCrossSlope,Ramp passing cross slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmRampFlareSlopeLeft,Ramp left flare slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,10,Add if greater than 10%,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.25,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampFlareSlopeRight,Ramp right flare slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,10,Add if greater than 10%,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.25,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampSmooth,Ramp smooth,TEXT,Enumerated,Smooth,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampSmooth,Ramp smooth,TEXT,Enumerated,Not Smooth,ADD;RAMP,,,,Add per Event,0.00,0.05,0.05,0.20,0.00,0.00,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.05,0.05,0.20,0.00,0.00
-stmRampFlushAtTop,Ramp flush at top,TEXT,Enumerated,Flush,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampFlushAtTop,Ramp flush at top,TEXT,Enumerated,Not Flush,ADD;RAMP,,,,Add per Event,0.00,0.05,0.05,0.20,0.00,0.00,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.05,0.05,0.20,0.00,0.00
-stmRampFlushAtBottom,Ramp flush at bottom (ramp to gutter),TEXT,Enumerated,Flush,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampFlushAtBottom,Ramp flush at bottom (ramp to gutter),TEXT,Enumerated,Not Flush,ADD;RAMP,,,,Add per Event,0.00,0.05,0.05,0.20,0.00,0.00,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.05,0.05,0.20,0.00,0.00
-stmRampFlushAtStreet,Ramp flush at street (gutter to street),TEXT,Enumerated,Flush,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampFlushAtStreet,Ramp flush at street (gutter to street),TEXT,Enumerated,Not Flush,ADD;RAMP,,,,Add per Event,0.00,0.05,0.05,0.20,0.00,0.00,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.05,0.05,0.20,0.00,0.00
-stmRampTransitionSlopeLeft,Ramp transition slope left,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,8.33,Add if greater than 8.33%,0.00,0.10,0.20,0.50,0.25,0.10,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmRampTransitionSlopeRight,Ramp transition slope right,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,8.33,Add if greater than 8.33%,0.00,0.10,0.20,0.50,0.25,0.10,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmRampLandingWidth,Ramp landing width,NUMERIC,Inches,NA,ADD;RAMP,OUTBX,,36,"Add if less than 36""",0.00,0.10,0.20,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmRampLandingSlope,Ramp landing slope,NUMERIC,Percent,NA,ADD;RAMP,OUTBX,,2,Add if less than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmRampWarningSurfaceOnePresent,Ramp warning surface one present,TEXT,Enumerated,Absent,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceOnePresent,Ramp warning surface one present,TEXT,Enumerated,Present,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceOneCondition,Ramp warning surface one condition,TEXT,Enumerated,Excellent,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceOneCondition,Ramp warning surface one condition,TEXT,Enumerated,Good,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceOneCondition,Ramp warning surface one condition,TEXT,Enumerated,Fair,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceOneCondition,Ramp warning surface one condition,TEXT,Enumerated,Poor,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoPresent,Ramp warning surface two present,TEXT,Enumerated,Absent,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoPresent,Ramp warning surface two present,TEXT,Enumerated,Present,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoCondition,Ramp warning surface two condition,TEXT,Enumerated,Excellent,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoCondition,Ramp warning surface two condition,TEXT,Enumerated,Good,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoCondition,Ramp warning surface two condition,TEXT,Enumerated,Fair,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmRampWarningSurfaceTwoCondition,Ramp warning surface two condition,TEXT,Enumerated,Poor,ADD;RAMP,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.20,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmCurbCutType,Curb cut type,TEXT,Enumerated,Standard Curb Cut,ADD;CUT,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCurbCutType,Curb cut type,TEXT,Enumerated, Historic Curb Cut,ADD;CUT,,,,Add per Event,0.00,0.25,0.25,0.50,0.25,0.25,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmCurbCutType,Curb cut type,TEXT,Enumerated, Sidewalk Diversion Curb Cut,ADD;CUT,,,,Add per Event,0.00,0.00,0.00,0.25,0.00,0.00,0.00,0.00,0.25,0.25,0.25,0.25,0.25,0.00,0.00,0.25,0.00,0.00
-stmCurbCutType,Curb cut type,TEXT,Enumerated, Sidewalk Depression Curb Cut,ADD;CUT,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCurbCutType,Curb cut type,TEXT,Enumerated, Other Curb Cut,ADD;CUT,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCurbCutWidthTop,Curb cut width top,NUMERIC,Inches,NA,ADD;CUT,OUTBX,,200,Add if greater than 200 inches,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmCurbCutPassingWidth,Curb cut passing width,NUMERIC,Inches,NA,ADD;CUT,OUTBX,36,,"Add if less than 36""",0.00,0.10,0.20,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmCurbCutCrossSlope,Curb cut passing cross slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmCurbCutFlareSlopeLeft,Curb cut left flare slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,10,Add if greater than 10%,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.10,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCurbCutFlareSlopeRight,Curb cut right flare slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,10,Add if greater than 10%,0.00,0.00,0.00,0.00,0.00,0.00,0.10,0.10,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCurbCutRampSlopeLeft,Curb cut left ramp slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,8.33,Add if greater than 8.33%,0.00,0.25,0.25,0.50,0.25,0.25,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmCurbCutRampCrossSlopeLeft,Curb cut left ramp cross slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmCurbCutRampSlopeRight,Curb cut right ramp slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,8.33,Add if greater than 8.33%,0.00,0.25,0.25,0.50,0.25,0.25,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.25,0.25,0.50,0.25,0.25
-stmCurbCutRampCrossSlopeRight,Curb cut right ramp cross slope,NUMERIC,Percent,NA,ADD;CUT,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmCurbCutDepressionSidewalkWidth,Curb cut depression sidewalk width,NUMERIC,Inches,NA,ADD;CUT,OUTBX,36,,"Add if less than 36""",0.00,0.10,0.20,0.50,0.50,0.50,0.25,0.25,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmCrossingSignalControlledIntersection,Signal controlled intersection,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingSignalControlledIntersection,Signal controlled intersection,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingStopControlledIntersection,Stop controlled intersection,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingStopControlledIntersection,Stop controlled intersection,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkPresent,Crosswalk present,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20
-stmCrossingCrosswalkPresent,Crosswalk present,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkComplete,Crosswalk complete,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingCrosswalkComplete,Crosswalk complete,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkandRampsAligned,Crosswalk and ramps aligned,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingCrosswalkandRampsAligned,Crosswalk and ramps aligned,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Parallel (Standard),ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Perpendicular Dash (Continental),ADD;CROSS,,,,Add per Event,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10,-0.10
-stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Diagonal Stripe (Zebra),ADD;CROSS,,,,Add per Event,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15,-0.15
-stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Other,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,None,ADD;CROSS,,,,Add per Event,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingPavementCrackingAbsent,Pavement cracking absent,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.20,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingPavementCrackingAbsent,Pavement cracking absent,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingPavementDisjointsAbsent,Pavement disjoints absent,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.20,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingPavementDisjointsAbsent,Pavement disjoints absent,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingPotholesAbsent,Potholes absent,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.20,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingPotholesAbsent,Potholes absent,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingObstructionsAbsent,Obstructions absent,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.20,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingObstructionsAbsent,Obstructions absent,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingDrainageWorking,Drainage working,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.10,0.05,0.05,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.05,0.05,0.10,0.05,0.05
-stmCrossingDrainageWorking,Drainage working,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingClearofDebris,Clear of debris,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.10,0.05,0.05,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.05,0.05,0.10,0.05,0.05
-stmCrossingClearofDebris,Clear of debris,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSRamp,Nearside Ramp Condition,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSRamp,Nearside Ramp Condition,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.20,0.10,0.10,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingNSRamp,Nearside Ramp Condition,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,1.00,0.50,0.50,0.15,0.15,1.00,1.00,1.00,1.00,1.00,0.50,0.50,1.00,0.50,0.50
-stmCrossingNSRamp,Nearside Ramp Condition,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,5.00,5.00,5.00,0.20,0.20,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00
-stmCrossingNSLandingPad,Nearside Landing Pad Condition,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSLandingPad,Nearside Landing Pad Condition,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.20,0.10,0.10,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingNSLandingPad,Nearside Landing Pad Condition,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,1.00,0.50,0.50,0.15,0.15,1.00,1.00,1.00,1.00,1.00,0.50,0.50,1.00,0.50,0.50
-stmCrossingNSLandingPad,Nearside Landing Pad Condition,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,5.00,5.00,5.00,0.20,0.20,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00
-stmCrossingNSPushButtonConditionandAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonConditionandAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingNSPushButtonConditionandAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingNSPushButtonConditionandAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
-stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonHeightOK,Nearside push button height OK,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingNSPushButtonHeightOK,Nearside push button height OK,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSPushButtonReachOK,Nearside push button reach OK,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingNSPushButtonReachOK,Nearside push button reach OK,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingFSSignalHeadLampWorking,Farside signal head lamp working,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.00,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingFSSignalHeadLampWorking,Farside signal head lamp working,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSSignalHeadVisible,Farside signal head visible,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.00,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingFSSignalHeadVisible,Farside signal head visible,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSRamp,Farside ramp,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSRamp,Farside ramp,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.20,0.10,0.10,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingFSRamp,Farside ramp,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,1.00,0.50,0.50,0.15,0.15,1.00,1.00,1.00,1.00,1.00,0.50,0.50,1.00,0.50,0.50
-stmCrossingFSRamp,Farside ramp,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,5.00,5.00,5.00,0.20,0.20,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00
-stmCrossingFSLandingPad,Farside landing pad,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSLandingPad,Farside landing pad,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.20,0.10,0.10,0.10,0.10,0.20,0.20,0.20,0.20,0.20,0.10,0.10,0.20,0.10,0.10
-stmCrossingFSLandingPad,Farside landing pad,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,1.00,0.50,0.50,0.15,0.15,1.00,1.00,1.00,1.00,1.00,0.50,0.50,1.00,0.50,0.50
-stmCrossingFSLandingPad,Farside landing pad,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,5.00,5.00,5.00,0.20,0.20,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00,5.00
-stmCrossingFSPushButtonConditionandAlignment,Farside push button cond./dir.,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonConditionandAlignment,Farside push button cond./dir.,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingFSPushButtonConditionandAlignment,Farside push button cond./dir.,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingFSPushButtonConditionandAlignment,Farside push button cond./dir.,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15,0.15
-stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.25,0.50,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonHeightOK,Farside push button height OK,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingFSPushButtonHeightOK,Farside push button height OK,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSPushButtonReachOK,Farside push button reach OK,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingFSPushButtonReachOK,Farside push button reach OK,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingNSSignalHeadConditionandAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Good,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSSignalHeadConditionandAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Fair,ADD;CROSS,,,,Add per Event,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05
-stmCrossingNSSignalHeadConditionandAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Poor,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingNSSignalHeadConditionandAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Absent,ADD;CROSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmCrossingNSSignalHeadLampWorking,Nearside signal head lamp working,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.00,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingNSSignalHeadLampWorking,Nearside signal head lamp working,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingNSSignalHeadVisible,Nearside signal head visible,TEXT,Enumerated,No,ADD;CROSS,,,,Add per Event,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.00,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25,0.25
-stmCrossingNSSignalHeadVisible,Nearside signal head visible,TEXT,Enumerated,Yes,ADD;CROSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeRightA_B,Traffic volume per hour A_B turning right across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeLeftA_B,Traffic volume per hour A_B turning left across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeThroughA_B,Traffic volume per hour A_B going straight across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeRightB_A,Traffic volume per hour B_A turning right across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeLeftB_A,Traffic volume per hour B_A turning left across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmCrossingLinkVehicleVolumeThroughB_A,Traffic volume per hour B_A going straight across crossing,NUMERIC,NA,NA,ADD;CROSS,,,,Add if [conditions TBD],0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-,,,,,,,,,,,,,,,,,,,,,,,,,,,
-stmBusStopPulloutPresent,Buses are able to pull out of main traffic lane,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopPulloutPresent,Buses are able to pull out of main traffic lane,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadWidth,Landing pad width (minimum 5'),NUMERIC,Inches,NA,ADD;BUSS,OUTBX,60,,"Add if less than 60""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadWidthCrossSlope,Landing pad width cross slope (maximum 2%),NUMERIC,Percent,NA,ADD;BUSS,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmBusStopLandingPadDepth,Landing pad depth (minimum 8'),NUMERIC,Inches,NA,ADD;BUSS,OUTBX,96,,"Add if less than 96""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadDepthCrossSlope,Landing pad depth cross slope (maximum 2%),NUMERIC,Percent,NA,ADD;BUSS,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Absent,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadObstructions,Landing pad obstructions,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLandingPadObstructions,Landing pad obstructions,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadWidth,"Stop pad width (minimum 30"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,30,,"Add if less than 30""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadWidthCrossSlope,Stop pad width cross slope (maximum 2%),NUMERIC,Percent,NA,ADD;BUSS,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmBusStopStopPadDepth,"Stop pad depth (minimum 48"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,48,,"Add if less than 48""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadDepthCrossSlope,Stop pad depth cross slope (maximum 2%),NUMERIC,Percent,NA,ADD;BUSS,OUTBX,,2,Add if greater than 2%,0.00,0.10,0.20,0.25,0.00,0.00,0.10,0.20,0.25,0.25,0.25,0.25,0.25,0.10,0.20,0.25,0.00,0.00
-stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadObstructions,Stop pad obstructions,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopStopPadObstructions,Stop pad obstructions,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopDirectPathtoBusDoor,Direct path to bus door,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopDirectPathtoBusDoor,Direct path to bus door,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopCurbRamptoBusDoor,Curb ramp to bus door,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopCurbRamptoBusDoor,Curb ramp to bus door,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShelterPresent,Shelter present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShelterPresent,Shelter present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50,0.50
-stmBusStopShelterEntryWidth,"Shelter entry width (minimum 30"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,30,,"Add if less than 30""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShelterRoofHeight,"Shelter roof height (minimum 80"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,80,,"Add if less than 80""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20,0.20
-stmBusStopBenchPresent,Bench present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10,0.10
-stmBusStopBenchPresent,Bench present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopBenchClearanceToCurb,"Bench clearance to curb (minimum 24"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,24,,"Add if less than 24""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopAreaAndRouteMapPresent,Map present for route and area,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopAreaAndRouteMapPresent,Map present for route and area,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopAreaAndRouteMapCondition,Map condition,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopAreaAndRouteMapCondition,Map condition,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignPresent,Sign present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignPresent,Sign present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Good,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Fair,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Poor,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignHeighttoBottom,"Sign height to bottom (minimum 27"")",NUMERIC,Inches,NA,ADD;BUSS,OUTBX,27,,"Add if less than 27""",0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignProtrusionIssues,"Sign protrusion issues (maximum 4"")",TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSignProtrusionIssues,"Sign protrusion issues (maximum 4"")",TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopTrashCanPresent,Trash can present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopTrashCanPresent,Trash can present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLightingPresent,Lighting present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopLightingPresent,Lighting present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShadePresent,Shade present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopShadePresent,Shade present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopVoiceGuidePresent,Voice system for disability community,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopVoiceGuidePresent,Voice system for disability community,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopRealTimeSignPresent,Real time arrival countdown digital sign present,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopRealTimeSignPresent,Real time arrival countdown digital sign present,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSurfacesStable,Surfaces all firm and stable,TEXT,Enumerated,No,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
-stmBusStopSurfacesStable,Surfaces all firm and stable,TEXT,Enumerated,Yes,ADD;BUSS,,,,Add per Event,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00
+﻿Variable Name,Variable Description,Format,Units,Enumeration,Impedance Effect Type,Impedance Equation Constraint,Lower Constraint Bound,Upper Constraint Bound,Calculation Notes,None,Some,Device,WChairM,WChairE,MScooter,LowVision,Blind,Some-LowVision,Device-LowVision,WChairM-LowVision,WChairE-LowVision,MScooter-LowVision,Some-Blind,Device-Blind,WChairM-Blind,WChairE-Blind,MScooter-Blind
+ADA Mobility Mode Speed,Speed of ADA Mobility Mode (mph),NUMERIC,Miles/Hour,NA,NA,NA,NA,NA,Use slowest value for mode speed,2.5,2,1.5,3,4,5,2,1.5,2,1.5,2,2,2,2,1.5,2,1.5,2
+stmPedLinkID,Link ID,NUMERIC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmAdaPathNodeAID,Node A ID,NUMERIC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmAdaPathNodeBID,Node B ID,NUMERIC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkLength,Link length,NUMERIC,Miles,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkImpedanceBase,Link Travel Time by Mode,NUMERIC,Hours,NA,NA,NA,NA,NA,Divide Length by mode speed,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkImpedanceMultiplier,Impedance Multiplier Effect,NUMERIC,NA,NA,NA,NA,NA,NA,Net multiplier effect,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkImpedanceEvents,Impedance Event Additions,NUMERIC,Hours,NA,NA,NA,NA,NA,Add all event effects,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkImpedanceTotal,Link Total Impedance,NUMERIC,Hours,NA,NA,NA,NA,NA,Multiply and add to get total impedance,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+stmPedLinkWidth,Link width,NUMERIC,Inches,NA,MUL,EQ,-999,-999,Multiply base time by value if = -999,1.2,1.2,1.2,2,2,2,1.2,1.2,1.2,1.2,2,2,2,1.2,1.2,2,2,2
+stmPedLinkWidth,Link width,NUMERIC,Inches,NA,MUL,EQ,0,0,Multiply base time by value if = 0,2,4,4,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999
+stmPedLinkWidth,Link width,NUMERIC,Inches,NA,MUL,INBX,0.001,30,"Multiply base time by value if < 30""",1.2,1.2,1.2,2,2,2,1.2,1.2,1.2,1.2,2,2,2,1.2,1.2,2,2,2
+stmPedLinkSlopeA_B,Link slope in direction A-B,NUMERIC,Degrees (decimal),NA,MUL,EQ,-999,-999,Multiply base time by value if = -999,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkSlopeA_B,Link slope in direction A-B,NUMERIC,Degrees (decimal),NA,MUL,INBX,3,4.999,Multiply base time by value if > 3,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkSlopeA_B,Link slope in direction A-B,NUMERIC,Degrees (decimal),NA,MUL,INBX,5,100,Multiply base time by value if > 5,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmPedLinkSlopeB_A,Link slope in direction B-A,NUMERIC,Degrees (decimal),NA,MUL,EQ,-999,-999,Multiply base time by value if > 3,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkSlopeB_A,Link slope in direction B-A,NUMERIC,Degrees (decimal),NA,MUL,INBX,3,4.999,Multiply base time by value if > 3,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkSlopeB_A,Link slope in direction B-A,NUMERIC,Degrees (decimal),NA,MUL,INBX,5,100,Multiply base time by value if > 5,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated,Concrete (Smooth),MUL,EQ,Concrete (Smooth),Concrete (Smooth),Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Concrete (Rough),MUL,EQ, Concrete (Rough), Concrete (Rough),Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Asphalt,MUL,EQ, Asphalt, Asphalt,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Brick,MUL,EQ, Brick, Brick,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Hexagonal Pavers,MUL,EQ, Hexagonal Pavers, Hexagonal Pavers,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Rectangular Pavers,MUL,EQ, Rectangular Pavers, Rectangular Pavers,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Cobblestone,MUL,EQ, Cobblestone, Cobblestone,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Plastic,MUL,EQ, Plastic, Plastic,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Wood,MUL,EQ, Wood, Wood,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Metal,MUL,EQ, Metal, Metal,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Gravel,MUL,EQ, Gravel, Gravel,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Grass,MUL,EQ, Grass, Grass,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Earth,MUL,EQ, Earth, Earth,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Sand,MUL,EQ, Sand, Sand,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkMaterial,Link surface material,TEXT,Enumerated, Other,MUL,EQ, Other, Other,Multiply base time by value if present,1.1,1.2,1.3,1.2,1.1,1.1,1.2,1.2,1.2,1.3,1.2,1.2,1.2,1.2,1.3,1.2,1.2,1.2
+stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated,Very Poor,MUL,EQ,Very Poor,Very Poor,Multiply base time by value if present,1,1.2,1.2,1.3,1.1,1.1,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3
+stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Poor,MUL,EQ, Poor, Poor,Multiply base time by value if present,1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Good,MUL,EQ, Good, Good,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Very Good,MUL,EQ, Very Good, Very Good,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkSurfaceRoughnessScore,Sidewalk roughness score (very poor to excellent),TEXT,Enumerated, Excellent,MUL,EQ, Excellent, Excellent,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaType,Area type,TEXT,Enumerated,CBD,MUL,EQ,CBD,CBD,Multiply base time by value if present,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3
+stmPedLinkAreaType,Area type,TEXT,Enumerated,Very High Density Urban,MUL,EQ,Very High Density Urban,Very High Density Urban,Multiply base time by value if present,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3
+stmPedLinkAreaType,Area type,TEXT,Enumerated, High Density Urban,MUL,EQ, High Density Urban, High Density Urban,Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmPedLinkAreaType,Area type,TEXT,Enumerated, Medium Density Urban,MUL,EQ, Medium Density Urban, Medium Density Urban,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkAreaType,Area type,TEXT,Enumerated, Low Density Urban,MUL,EQ, Low Density Urban, Low Density Urban,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaType,Area type,TEXT,Enumerated, Suburban,MUL,EQ, Suburban, Suburban,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkAreaType,Area type,TEXT,Enumerated, Exurban,MUL,EQ, Exurban, Exurban,Multiply base time by value if present,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3,1.3
+stmPedLinkAreaType,Area type,TEXT,Enumerated, Rural,MUL,EQ, Rural, Rural,Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmPedLinkAreaResidentialDensity,Residential density,NUMERIC,per square-mile,,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaEmploymentDensity,Employment density,NUMERIC,per square-mile,,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaRestaurantDensity,Restaurant density,NUMERIC,per square-mile,,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaShoppingDensity,Shopping density,NUMERIC,per square-mile,,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAreaParkDensity,Public park/recreation area density,NUMERIC,per square-mile,,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Not Lighted,MUL,EQ,Not Lighted,Not Lighted,Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Minimally Lighted,MUL,EQ,Minimally Lighted,Minimally Lighted,Multiply base time by value if present,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15
+stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Somewhat Lighted,MUL,EQ,Somewhat Lighted,Somewhat Lighted,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Mostly Lighted,MUL,EQ,Mostly Lighted,Mostly Lighted,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
+stmPedLinkAttributeLighting,Street lighting,TEXT,Enumerated,Heavily Lighted,MUL,EQ,Heavily Lighted,Heavily Lighted,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated,Not Shaded,MUL,EQ,Not Shaded,Not Shaded,Multiply base time by value if present,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15,1.15
+stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Minimally Shaded,MUL,EQ, Minimally Shaded, Minimally Shaded,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Somewhat Shaded,MUL,EQ, Somewhat Shaded, Somewhat Shaded,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
+stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Mostly Shaded,MUL,EQ, Mostly Shaded, Mostly Shaded,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmPedLinkAttributeShadeTrees,Presence of trees providing shade,TEXT,Enumerated, Heavily Shaded,MUL,EQ, Heavily Shaded, Heavily Shaded,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated,Centroid Connector,MUL,EQ,Centroid Connector,Centroid Connector,Multiply base time by value if present,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Interstate/Freeway,MUL,EQ, Interstate/Freeway, Interstate/Freeway,Multiply base time by value if present,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999,999
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Parkway,MUL,EQ, Parkway, Parkway,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Buffer Separated,MUL,EQ, HOV Buffer Separated, HOV Buffer Separated,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Barrier Separated,MUL,EQ, HOV Barrier Separated, HOV Barrier Separated,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, High Speed Ramp/CD Road,MUL,EQ, High Speed Ramp/CD Road, High Speed Ramp/CD Road,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Medium Speed Ramp,MUL,EQ, Medium Speed Ramp, Medium Speed Ramp,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Low Speed Ramp,MUL,EQ, Low Speed Ramp, Low Speed Ramp,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Loop Ramp,MUL,EQ, Loop Ramp, Loop Ramp,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Off Ramp w/Intersection,MUL,EQ, Off Ramp w/Intersection, Off Ramp w/Intersection,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, On Ramp w/Intersection,MUL,EQ, On Ramp w/Intersection, On Ramp w/Intersection,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Expressway,MUL,EQ, Expressway, Expressway,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Principal Arterial Class I,MUL,EQ, Principal Arterial Class I, Principal Arterial Class I,Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Principal Arterial Class II,MUL,EQ, Principal Arterial Class II, Principal Arterial Class II,Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Arterial Class I,MUL,EQ, Minor Arterial Class I, Minor Arterial Class I,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Arterial Class II,MUL,EQ, Minor Arterial Class II, Minor Arterial Class II,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, HOV Arterial (all classes),MUL,EQ, HOV Arterial (all classes), HOV Arterial (all classes),Multiply base time by value if present,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Major Collector,MUL,EQ, Major Collector, Major Collector,Multiply base time by value if present,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Minor Collector/Other Local,MUL,EQ, Minor Collector/Other Local, Minor Collector/Other Local,Multiply base time by value if present,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05,1.05
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Planned Ramps w/Intersections,MUL,EQ, Planned Ramps w/Intersections, Planned Ramps w/Intersections,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Planned Directional Ramps,MUL,EQ, Planned Directional Ramps, Planned Directional Ramps,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link,MUL,EQ, Transit Only Link, Transit Only Link,Multiply base time by value if present,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Neighborhood Local,MUL,EQ, Neighborhood Local, Neighborhood Local,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Local Roads and Collectors,MUL,EQ, Transit Only Link: Local Roads and Collectors, Transit Only Link: Local Roads and Collectors,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Park-n-ride lot connector,MUL,EQ, Transit Only Link: Park-n-ride lot connector, Transit Only Link: Park-n-ride lot connector,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Transit Only Link: Transfer links between rail and bus,MUL,EQ, Transit Only Link: Transfer links between rail and bus, Transit Only Link: Transfer links between rail and bus,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkFacilityType,Adjacent road facility type,TEXT,Enumerated, Associated with BRT Routes,MUL,EQ, Associated with BRT Routes, Associated with BRT Routes,Multiply base time by value if present,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkAadtA_B,Adjacent road AADT for direction A-B,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkAadtB_A,Adjacent road AADT for direction B-A,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkPercentHDTA_B,Percent heavy-duty trucks for direction A-B,NUMERIC,Percent,NA,MUL,INBX,3,5.999,Multiply base time by value if ≥ 3 and < 6,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkPercentMDTA_B,Percent medium-duty trucks for direction A-B,NUMERIC,Percent,NA,MUL,INBX,6,100,Multiply base time by value if ≥ 6,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkPercentHDTB_A,Percent heavy-duty trucks for direction B-A,NUMERIC,Percent,NA,MUL,INBX,3,5.999,Multiply base time by value if ≥ 3 and < 6,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkPercentMDTB_A,Percent medium-duty trucks for direction B-A,NUMERIC,Percent,NA,MUL,INBX,6,100,Multiply base time by value if ≥ 6,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkLanesA_B,Number of lanes for direction A-B,NUMERIC,NA,NA,MUL,INBX,3,20,Multiply base time by value if ≥ 3,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkLanesB_A,Number of lanes for direction B-A,NUMERIC,NA,NA,MUL,INBX,3,20,Multiply base time by value if ≥ 3,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2
+stmRoadLinkLaneWidthA_B,Average travel lane width,NUMERIC,Feet ,NA,MUL,INBX,120,1000,"Multiply base time by value if ≥ 120""",1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkLaneWidthB_A,Average travel lane width,NUMERIC,Feet ,NA,MUL,INBX,120,1000,"Multiply base time by value if ≥ 120""",1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkShoulderWidthA_B,Shoulder width for direction A-B,NUMERIC,Feet ,NA,MUL,INBX,0,35.999,"Multiply base time by value if < 36""",1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkShoulderWidthB_A,Shoulder width for direction B-A,NUMERIC,Feet ,NA,MUL,INBX,0,35.999,"Multiply base time by value if < 36""",1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkSpeedLimit,Posted speed limit,NUMERIC,MPH,NA,MUL,INBX,30,100,Multiply base time by value if ≥ 30,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkObservedSpeed,Observed speed,NUMERIC,MPH,NA,MUL,INBX,30,100,Multiply base time by value if ≥ 30,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1,1.1
+stmRoadLinkObservedPedestrianCount,Average daily count of sidewalk pedestrians,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkObservedCollisions,Traffic collisions,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkObservedInjuries,Injuries,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmRoadLinkObservedFatalities,Fatalities,NUMERIC,NA,NA,MUL,TBD,,,Multiply base time by value if [condition TBD],1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+stmCrossingCrossingPathCrossSlope [delete],Delete on next update - Link cross slope already used,NUMERIC,Percent,NA,MUL,EQ,-999,-999,Multiply if crossing cross slope problem identified,1,1,1.1,1.2,1,1,1.1,1.1,1.1,1.1,1.2,1.1,1.1,1.1,1.1,1.2,1.1,1.1
+stmCrossingCrossingPathCrossSlope [delete],Delete on next update - Link cross slope already used,NUMERIC,Percent,NA,MUL,INBX,2.01,1000,Mutiply if cross slope > 2%,1,1,1.1,1.2,1,1,1.1,1.1,1.1,1.1,1.2,1.1,1.1,1.1,1.1,1.2,1.1,1.1
+stmAssetDefectReportProblemPedLinkSlope,Sidewalk slope problem (rare),TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmAssetDefectReportProblemPedLinkCrossSlope,Sidewalk cross-slope problem (isolated),TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmAssetDefectReportProblemPedLinkWidth,Sidewalk width narrowing (isolated),TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,60,60,30,15,15,15,15,60,60,30,15,15,60,60,30
+stmAssetDefectReportProblemLinkDisjoint,Defect report sidewalk problem (surface) disjoint,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmAssetDefectReportProblemLinkPothole,Defect report sidewalk problem pothole,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,45,30,30,30,30,30,30,45,30,30,30,30,45,30,30
+stmAssetDefectReportProblemLinkBlocked,Defect report sidewalk problem link is completely blocked,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,180,120,120,120,180,120,120,180,120,120,180,180,180,180,180
+stmAssetDefectReportProblemLinkObstruction,Defect report sidewalk problem partial obstruction,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,60,60,30,15,15,15,15,60,60,30,15,15,60,60,30
+stmAssetDefectReportProblemLinkDebris,Defect report sidewalk problem debris,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,60,60,30,15,15,15,15,60,60,30,15,15,60,60,30
+stmAssetDefectReportProblemLinkWater,Defect report sidewalk problem standing water,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add for each defect report associated with the link,15,15,15,60,60,30,15,15,15,15,60,60,30,15,15,60,60,30
+stmPedRampType,Ramp type,TEXT,Enumerated,Standard Perpendicular Ramp,ADD,EQ,Standard Perpendicular Ramp,Standard Perpendicular Ramp,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmPedRampType,Ramp type,TEXT,Enumerated, Diagonal Ramp,ADD,EQ, Diagonal Ramp, Diagonal Ramp,Add per Event,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampType,Ramp type,TEXT,Enumerated, Parallel Ramp,ADD,EQ, Parallel Ramp, Parallel Ramp,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmPedRampType,Ramp type,TEXT,Enumerated, Perpendicular Ramp with Return Edges,ADD,EQ, Perpendicular Ramp with Return Edges, Perpendicular Ramp with Return Edges,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmPedRampType,Ramp type,TEXT,Enumerated, Combination Perpendicular Parallel Ramp,ADD,EQ, Combination Perpendicular Parallel Ramp, Combination Perpendicular Parallel Ramp,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmPedRampType,Ramp type,TEXT,Enumerated, Combination Diagonal Parallel Ramp,ADD,EQ, Combination Diagonal Parallel Ramp, Combination Diagonal Parallel Ramp,Add per Event,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampType,Ramp type,TEXT,Enumerated, Built-Up Ramp,ADD,EQ, Built-Up Ramp, Built-Up Ramp,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmPedRampType,Ramp type,TEXT,Enumerated, Linear Ramp,ADD,EQ, Linear Ramp, Linear Ramp,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmPedRampType,Ramp type,TEXT,Enumerated,At Grade,ADD,EQ,At Grade,At Grade,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmPedRampWidth,Ramp width,NUMERIC,Inches,NA,ADD,EQ,0,0,Add if ramp is absent (width=0),0,0,30,180,180,180,30,60,30,30,180,180,180,60,60,180,180,180
+stmPedRampWidth,Ramp width,NUMERIC,Inches,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampWidth,Ramp width,NUMERIC,Inches,NA,ADD,INBX,1,37,"Add if less than 36""",0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampSlope,Ramp slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampSlope,Ramp slope,NUMERIC,Percent,NA,ADD,INBX,8.34,100,Add if greater than 8.33%,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampCrossSlope,Ramp cross slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampCrossSlope,Ramp cross slope,NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampGutterSlope,Ramp gutter slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,0,0,30,15,0,0,0,0,0,30,15,0,0,0,30,15,0
+stmPedRampGutterSlope,Ramp gutter slope,NUMERIC,Percent,NA,ADD,INBX,0.6,100,Add if greater than 0.5%,0,0,0,30,15,0,0,0,0,0,30,15,0,0,0,30,15,0
+stmPedRampPassingWidth,Ramp passing width,NUMERIC,Inches,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampPassingWidth,Ramp passing width,NUMERIC,Inches,NA,ADD,INBX,0.1,1000,"Add if less than 36""",0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampPassingCrossSlope,Ramp passing cross slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampPassingCrossSlope,Ramp passing cross slope,NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampFlareSlopeLeft,Ramp left flare slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,0,0,0,0,0,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampFlareSlopeLeft,Ramp left flare slope,NUMERIC,Percent,NA,ADD,INBX,10.01,1000,Add if greater than 10%,0,0,0,0,0,0,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampFlareSlopeRight,Ramp right flare slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,0,0,0,0,0,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampFlareSlopeRight,Ramp right flare slope,NUMERIC,Percent,NA,ADD,INBX,10.01,1000,Add if greater than 10%,0,0,0,0,0,0,15,15,15,15,15,15,15,15,15,15,15,15
+stmPedRampSmooth,Ramp smooth,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampSmooth,Ramp smooth,TEXT,Enumerated,Not Smooth,ADD,EQ,Not Smooth,Not Smooth,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtTop,Ramp flush at top,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtTop,Ramp flush at top,TEXT,Enumerated,Not Flush,ADD,EQ,Not Flush,Not Flush,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtBottom,Ramp flush at bottom (ramp to gutter),TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtBottom,Ramp flush at bottom (ramp to gutter),TEXT,Enumerated,Not Flush,ADD,EQ,Not Flush,Not Flush,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtStreet,Ramp flush at street (gutter to street),TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampFlushAtStreet,Ramp flush at street (gutter to street),TEXT,Enumerated,Not Flush,ADD,EQ,Not Flush,Not Flush,Add per Event,0,3,3,12,0,0,6,6,6,6,12,6,6,6,6,12,6,6
+stmPedRampTransitionSlopeLeft,Ramp transition slope left,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampTransitionSlopeLeft,Ramp transition slope left,NUMERIC,Percent,NA,ADD,INBX,8.34,100,Add if greater than 8.33%,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampTransitionCrossSlopeLeft,Ramp transition cross slope left,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampTransitionCrossSlopeLeft,Ramp transition cross slope left,NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampTransitionSlopeRight,Ramp transition slope right,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampTransitionSlopeRight,Ramp transition slope right,NUMERIC,Percent,NA,ADD,INBX,8.34,100,Add if greater than 8.33%,0,6,12,30,15,6,15,15,15,15,30,15,15,15,15,30,15,15
+stmPedRampTransitionCrossSlopeRight,Ramp transition cross slope right,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampTransitionCrossSlopeRight,Ramp transition cross slope right,NUMERIC,Percent,NA,ADD,INBX,2.01,100,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampLandingMinimumWidth,Ramp landing minimum width (360 degrees),NUMERIC,Inches,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampLandingMinimumWidth,Ramp landing minimum width (360 degrees),NUMERIC,Inches,NA,ADD,INBX,0,35.99,"Add if less than 48"" (PROWAG)",0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmPedRampLandingCrossSlope,Ramp landing cross slope (360 degrees),NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampLandingCrossSlope,Ramp landing cross slope (360 degrees),NUMERIC,Percent,NA,ADD,INBX,2.01,100,Add if greater than 2% (level 360 degrees),0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmPedRampDetectableWarningPresent,Ramp warning surface present,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,0,0,0,0,0,0,6,12,6,6,6,6,6,12,12,12,12,12
+stmPedRampDetectableWarningCondition,Ramp warning surface condition,TEXT,Enumerated,Problem,ADD,EQ,Problem,Problem,Add per Event,0,0,0,0,0,0,6,12,6,6,6,6,6,12,12,12,12,12
+stmPedRampDetectableWarningCondition,Ramp warning surface condition,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,6,12,6,6,6,6,6,12,12,12,12,12
+stmPedRampDetectableWarningCondition,Ramp warning surface condition,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,0,0,0,0,0,0,6,12,6,6,6,6,6,12,12,12,12,12
+stmPedRampDetectableWarningCondition,Ramp warning surface condition,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,0,0,0,0,0,0,6,12,6,6,6,6,6,12,12,12,12,12
+stmCurbCutType,Curb cut type,TEXT,Enumerated,Standard Curb Cut,ADD,EQ,Standard Curb Cut,Standard Curb Cut,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCurbCutType,Curb cut type,TEXT,Enumerated, Historic Curb Cut,ADD,EQ, Historic Curb Cut, Historic Curb Cut,Add per Event,0,15,15,30,15,15,15,15,15,15,30,15,15,15,15,30,15,15
+stmCurbCutType,Curb cut type,TEXT,Enumerated, Sidewalk Diversion Curb Cut,ADD,EQ, Sidewalk Diversion Curb Cut, Sidewalk Diversion Curb Cut,Add per Event,0,0,0,15,0,0,0,0,0,0,15,0,0,0,0,15,0,0
+stmCurbCutType,Curb cut type,TEXT,Enumerated, Sidewalk Depression Curb Cut,ADD,EQ, Sidewalk Depression Curb Cut, Sidewalk Depression Curb Cut,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCurbCutType,Curb cut type,TEXT,Enumerated, Other Curb Cut,ADD,EQ, Other Curb Cut, Other Curb Cut,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCurbCutWidthTop,Curb cut width top,NUMERIC,Inches,NA,ADD,OUTBX,0,200,Add if greater than 200 inches,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
+stmCurbCutPassingWidth,Curb cut passing width,NUMERIC,Inches,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmCurbCutPassingWidth,Curb cut passing width,NUMERIC,Inches,NA,ADD,INBX,0,35.9,"Add if less than 36""",0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmCurbCutCrossSlope,Curb cut passing cross slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutCrossSlope,Curb cut passing cross slope,NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutFlareSlopeLeft,Curb cut left flare slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,0,0,0,0,0,6,6,6,6,6,6,6,6,6,6,6,6
+stmCurbCutFlareSlopeLeft,Curb cut left flare slope,NUMERIC,Percent,NA,ADD,INBX,10.1,100,Add if greater than 10%,0,0,0,0,0,0,6,6,6,6,6,6,6,6,6,6,6,6
+stmCurbCutFlareSlopeRight,Curb cut right flare slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,0,0,0,0,0,6,6,6,6,6,6,6,6,6,6,6,6
+stmCurbCutFlareSlopeRight,Curb cut right flare slope,NUMERIC,Percent,NA,ADD,INBX,10.1,100,Add if greater than 10%,0,0,0,0,0,0,6,6,6,6,6,6,6,6,6,6,6,6
+stmCurbCutRampSlopeLeft,Curb cut left ramp slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,15,15,30,15,15,15,15,15,15,30,15,15,15,15,30,15,15
+stmCurbCutRampSlopeLeft,Curb cut left ramp slope,NUMERIC,Percent,NA,ADD,INBX,8.34,100,Add if greater than 8.33%,0,15,15,30,15,15,15,15,15,15,30,15,15,15,15,30,15,15
+stmCurbCutRampCrossSlopeLeft,Curb cut left ramp cross slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutRampCrossSlopeLeft,Curb cut left ramp cross slope,NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutRampSlopeRight,Curb cut right ramp slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,15,15,30,15,15,15,15,15,15,30,15,15,15,15,30,15,15
+stmCurbCutRampSlopeRight,Curb cut right ramp slope,NUMERIC,Percent,NA,ADD,INBX,8.34,100,Add if greater than 8.33%,0,15,15,30,15,15,15,15,15,15,30,15,15,15,15,30,15,15
+stmCurbCutRampCrossSlopeRight,Curb cut right ramp cross slope,NUMERIC,Percent,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutRampCrossSlopeRight,Curb cut right ramp cross slope,NUMERIC,Percent,NA,ADD,INBX,2.01,100,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmCurbCutDepressionSidewalkWidth,Curb cut depression sidewalk width,NUMERIC,Inches,NA,ADD,EQ,-999,-999,Add if defect identified in video inspection,0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmCurbCutDepressionSidewalkWidth,Curb cut depression sidewalk width,NUMERIC,Inches,NA,ADD,INBX,0,35.9,"Add if less than 36""",0,6,12,30,30,30,15,15,15,15,30,30,30,15,15,30,30,30
+stmCrossingSignalControlledIntersection,Signal controlled intersection,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingSignalControlledIntersection,Signal controlled intersection,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingStopControlledIntersection,Stop controlled intersection,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmCrossingStopControlledIntersection,Stop controlled intersection,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkPresent,Crosswalk present,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+stmCrossingCrosswalkPresent,Crosswalk present,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkComplete,Crosswalk complete,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingCrosswalkComplete,Crosswalk complete,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkandRampsAligned,Crosswalk and ramps aligned,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingCrosswalkandRampsAligned,Crosswalk and ramps aligned,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Parallel (Standard),ADD,EQ,Parallel (Standard),Parallel (Standard),Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Perpendicular Dash (Continental),ADD,EQ,Perpendicular Dash (Continental),Perpendicular Dash (Continental),Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Diagonal Stripe (Zebra),ADD,EQ,Diagonal Stripe (Zebra),Diagonal Stripe (Zebra),Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,Other,ADD,EQ,Other,Other,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkStyle,Crosswalk lines and design style,TEXT,Enumerated,None,ADD,EQ,None,None,Add per Event,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
+stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingCrosswalkPaintConditions,Crosswalk paint conditions,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSRamp,Nearside ramp condition,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,300,300,300,12,12,12,12,300,300,300,12,12,300,300,300
+stmCrossingNSLanding,Nearside landing condition,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,180,180,180,12,12,12,12,180,180,180,12,12,180,180,180
+stmCrossingNSPushButtonConditionAndAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSPushButtonConditionAndAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingNSPushButtonConditionAndAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSPushButtonConditionAndAlignment,Nearside push button condition and alignment,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9
+stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingNSPushButtonVoiceSystem,Nearside push button voice system,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingNSPushButtonHeightOK,Nearside push button height OK,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmCrossingNSPushButtonHeightOK,Nearside push button height OK,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSPushButtonReachOK,Nearside push button reach OK,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmCrossingNSPushButtonReachOK,Nearside push button reach OK,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSSigns,Nearside signs,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingFSSignalHeadCondition,Farside signal head condition,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingFSSignalHeadLampWorking,Farside signal head lamp working,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,15,15,15,15,15,15,15,0,15,15,15,15,15,15,15,15,15,15
+stmCrossingFSSignalHeadLampWorking,Farside signal head lamp working,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSSignalHeadVisible,Farside signal head visible,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,15,15,15,15,15,15,15,0,15,15,15,15,15,15,15,15,15,15
+stmCrossingFSSignalHeadVisible,Farside signal head visible,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSRamp,Farside ramp condition,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,300,300,300,12,12,12,12,300,300,300,12,12,300,300,300
+stmCrossingFSLanding,Farside landing condition,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,180,180,180,12,12,12,12,180,180,180,12,12,180,180,180
+stmCrossingFSPushButtonConditionAndAlignment,Farside push button cond./dir.,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSPushButtonConditionAndAlignment,Farside push button cond./dir.,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingFSPushButtonConditionAndAlignment,Farside push button cond./dir.,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingFSPushButtonConditionAndAlignment,Farside push button cond./dir.,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9
+stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingFSPushButtonVoiceSystem,Farside push button voice system,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,0,0,0,0,0,0,15,30,15,15,15,15,15,30,30,30,30,30
+stmCrossingFSPushButtonHeightOK,Farside push button height OK,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmCrossingFSPushButtonHeightOK,Farside push button height OK,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSPushButtonReachOK,Farside push button reach OK,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,6,6,6,15,15,15,15,15,15,15,15,15,15,15,15,15,15,15
+stmCrossingFSPushButtonReachOK,Farside push button reach OK,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingFSSigns,Farside signs,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSSignalHeadConditionAndAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Good,ADD,EQ,Good,Good,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSSignalHeadConditionAndAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Fair,ADD,EQ,Fair,Fair,Add per Event,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+stmCrossingNSSignalHeadConditionAndAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Poor,ADD,EQ,Poor,Poor,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSSignalHeadConditionAndAlignment,Nearside signal head condition and alignment,TEXT,Enumerated,Absent,ADD,EQ,Absent,Absent,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmCrossingNSSignalHeadLampWorking,Nearside signal head lamp working,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,15,15,15,15,15,15,15,0,15,15,15,15,15,15,15,15,15,15
+stmCrossingNSSignalHeadLampWorking,Nearside signal head lamp working,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingNSSignalHeadVisible,Nearside signal head visible,TEXT,Enumerated,No,ADD,EQ,No,No,Add per Event,15,15,15,15,15,15,15,0,15,15,15,15,15,15,15,15,15,15
+stmCrossingNSSignalHeadVisible,Nearside signal head visible,TEXT,Enumerated,Yes,ADD,EQ,Yes,Yes,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeRightA_B,Traffic volume per hour A_B turning right across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeLeftA_B,Traffic volume per hour A_B turning left across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeThroughA_B,Traffic volume per hour A_B going straight across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeRightB_A,Traffic volume per hour B_A turning right across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeLeftB_A,Traffic volume per hour B_A turning left across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmCrossingLinkVehicleVolumeThroughB_A,Traffic volume per hour B_A going straight across crossing,NUMERIC,Vehicles/Hour,No,ADD,EQ,,,Add if [conditions TBD],0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopPulloutPresent,Buses are able to pull out of main traffic lane,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopPulloutPresent,Buses are able to pull out of main traffic lane,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadWidth,Landing pad width (minimum 5'),NUMERIC,Inches,NA,ADD,,,,"Add if less than 60""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadWidthCrossSlope,Landing pad width cross slope (maximum 2%),NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmBusStopLandingPadDepth,Landing pad depth (minimum 8'),NUMERIC,Inches,NA,ADD,,,,"Add if less than 96""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadDepthCrossSlope,Landing pad depth cross slope (maximum 2%),NUMERIC,Percent,NA,ADD,,,,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadSurfaceCondition,Landing pad surface condition,TEXT,Enumerated,Absent,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadObstructions,Landing pad obstructions,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLandingPadObstructions,Landing pad obstructions,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadWidth,"Stop pad width (minimum 30"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 30""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadWidthCrossSlope,Stop pad width cross slope (maximum 2%),NUMERIC,Percent,NA,ADD,INBX,2.01,1000,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmBusStopStopPadDepth,"Stop pad depth (minimum 48"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 48""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadDepthCrossSlope,Stop pad depth cross slope (maximum 2%),NUMERIC,Percent,NA,ADD,,,,Add if greater than 2%,0,6,12,15,0,0,6,12,6,12,15,6,6,12,12,15,12,12
+stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadSurfaceCondition,Stop pad surface condition,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadObstructions,Stop pad obstructions,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopStopPadObstructions,Stop pad obstructions,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopDirectPathtoBusDoor,Direct path to bus door,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopDirectPathtoBusDoor,Direct path to bus door,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopCurbRamptoBusDoor,Curb ramp to bus door,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopCurbRamptoBusDoor,Curb ramp to bus door,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkAtStopCondition,Sidewalk condition at stop,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachLeftCondition,Sidewalk condition for left approach,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSidewalkApproachRightCondition,Sidewalk condition for right approach,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShelterPresent,Shelter present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShelterPresent,Shelter present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
+stmBusStopShelterEntryWidth,"Shelter entry width (minimum 30"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 30""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShelterRoofHeight,"Shelter roof height (minimum 80"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 80""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Fair,ADD,,,,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmBusStopShelterCondition,Shelter condition,TEXT,Enumerated,Poor,ADD,,,,Add per Event,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12
+stmBusStopBenchPresent,Bench present,TEXT,Enumerated,No,ADD,,,,Add per Event,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+stmBusStopBenchPresent,Bench present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopBenchCondition,Bench condition,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopBenchClearanceToCurb,"Bench clearance to curb (minimum 24"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 24""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopAreaAndRouteMapPresent,Map present for route and area,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopAreaAndRouteMapPresent,Map present for route and area,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopAreaAndRouteMapCondition,Map condition,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopAreaAndRouteMapCondition,Map condition,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignPresent,Sign present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignPresent,Sign present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Good,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Fair,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignCondition,Sign condition,TEXT,Enumerated,Poor,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignHeighttoBottom,"Sign height to bottom (minimum 27"")",NUMERIC,Inches,NA,ADD,,,,"Add if less than 27""",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignProtrusionIssues,"Sign protrusion issues (maximum 4"")",TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSignProtrusionIssues,"Sign protrusion issues (maximum 4"")",TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopTrashCanPresent,Trash can present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopTrashCanPresent,Trash can present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLightingPresent,Lighting present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopLightingPresent,Lighting present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShadePresent,Shade present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopShadePresent,Shade present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopVoiceGuidePresent,Voice system for disability community,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopVoiceGuidePresent,Voice system for disability community,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopRealTimeSignPresent,Real time arrival countdown digital sign present,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopRealTimeSignPresent,Real time arrival countdown digital sign present,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSurfacesStable,Surfaces all firm and stable,TEXT,Enumerated,No,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+stmBusStopSurfacesStable,Surfaces all firm and stable,TEXT,Enumerated,Yes,ADD,,,,Add per Event,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

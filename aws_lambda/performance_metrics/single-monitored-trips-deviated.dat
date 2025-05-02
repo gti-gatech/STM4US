@@ -1,0 +1,861 @@
+[
+{
+    "_id" : "3532590a-797d-4917-8362-275617a1e842",
+    "arrivalVarianceMinutesThreshold" : 5,
+    "arriveBy" : False,
+    "dateCreated" : "2024-02-05T20:13:45.529+0000",
+    "departureVarianceMinutesThreshold" : 5,
+    "excludeFederalHolidays" : True,
+    "friday" : True,
+    "from" : {
+        "departure" : "2024-02-05T20:40:00.000+0000",
+        "lat" : 33.95334,
+        "lon" : -83.98808,
+        "name" : "30 S Clayton St, Lawrenceville, Georgia",
+        "vertexType" : "NORMAL"
+    },
+    "inactive" : False,
+    "isActive" : True,
+    "itinerary" : {
+        "alerts" : [
+
+        ],
+        "duration" : 637,
+        "elevationGained" : 0.0,
+        "elevationLost" : 0.0,
+        "endTime" : "2024-02-05T20:50:37.000+0000",
+        "fare" : {
+            "details" : {
+                "regular" : [
+
+                ],
+                "senior" : [
+
+                ],
+                "youth" : [
+
+                ]
+            },
+            "fare" : {
+                "regular" : {
+                    "cents" : 0,
+                    "currency" : {
+                        "currency" : "USD",
+                        "currencyCode" : "USD",
+                        "defaultFractionDigits" : 2,
+                        "symbol" : "$"
+                    }
+                },
+                "senior" : {
+                    "cents" : 0,
+                    "currency" : {
+                        "currency" : "USD",
+                        "currencyCode" : "USD",
+                        "defaultFractionDigits" : 2,
+                        "symbol" : "$"
+                    }
+                },
+                "youth" : {
+                    "cents" : 0,
+                    "currency" : {
+                        "currency" : "USD",
+                        "currencyCode" : "USD",
+                        "defaultFractionDigits" : 2,
+                        "symbol" : "$"
+                    }
+                }
+            }
+        },
+        "legs" : [
+            {
+                "arrivalDelay" : 0,
+                "departureDelay" : 0,
+                "distance" : 519.36,
+                "duration" : 296.0,
+                "endTime" : "2024-02-05T20:44:56.000+0000",
+                "from" : {
+                    "departure" : "2024-02-05T20:40:00.000+0000",
+                    "lat" : 33.95334,
+                    "lon" : -83.98808,
+                    "name" : "30 S Clayton St, Lawrenceville, Georgia",
+                    "vertexType" : "NORMAL"
+                },
+                "interlineWithPreviousLeg" : False,
+                "legGeometry" : {
+                    "length" : 33,
+                    "points" : "iofnEr|r_O`@A@N?FJrBDbA@D@Rd@CdBKz@C`@Ch@ArAELA\\AH?`@C^DJBFFDHBHBRAL?`@@`@TEPE@^@N@NC?"
+                },
+                "mode" : "WALK",
+                "pathway" : False,
+                "realTime" : False,
+                "rentedBike" : False,
+                "route" : "",
+                "startTime" : "2024-02-05T20:40:00.000+0000",
+                "steps" : [
+                    {
+                        "absoluteDirection" : "SOUTH",
+                        "area" : False,
+                        "bogusName" : False,
+                        "distance" : 19.67,
+                        "lat" : 33.9533388,
+                        "lon" : -83.9880981,
+                        "relativeDirection" : "DEPART",
+                        "stayOn" : False,
+                        "streetName" : "South Clayton Street"
+                    },
+                    {
+                        "absoluteDirection" : "WEST",
+                        "area" : False,
+                        "bogusName" : False,
+                        "distance" : 108.7,
+                        "lat" : 33.9531625,
+                        "lon" : -83.9880815,
+                        "relativeDirection" : "RIGHT",
+                        "stayOn" : False,
+                        "streetName" : "Seminary Street"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTH",
+                        "area" : False,
+                        "bogusName" : False,
+                        "distance" : 249.68,
+                        "lat" : 33.953045,
+                        "lon" : -83.9892513,
+                        "relativeDirection" : "LEFT",
+                        "stayOn" : False,
+                        "streetName" : "South Perry Street"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTH",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 50.67,
+                        "lat" : 33.9508054,
+                        "lon" : -83.9890578,
+                        "relativeDirection" : "CONTINUE",
+                        "stayOn" : False,
+                        "streetName" : "link"
+                    },
+                    {
+                        "absoluteDirection" : "WEST",
+                        "area" : False,
+                        "bogusName" : False,
+                        "distance" : 38.21,
+                        "lat" : 33.9504787,
+                        "lon" : -83.9893447,
+                        "relativeDirection" : "SLIGHTLY_RIGHT",
+                        "stayOn" : False,
+                        "streetName" : "Nash Street"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTH",
+                        "area" : False,
+                        "bogusName" : False,
+                        "distance" : 23.18,
+                        "lat" : 33.9504786,
+                        "lon" : -83.9897586,
+                        "relativeDirection" : "LEFT",
+                        "stayOn" : False,
+                        "streetName" : "Stone Mountain Street"
+                    },
+                    {
+                        "absoluteDirection" : "WEST",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 29.25,
+                        "lat" : 33.950277,
+                        "lon" : -83.9896954,
+                        "relativeDirection" : "RIGHT",
+                        "stayOn" : False,
+                        "streetName" : "path"
+                    }
+                ],
+                "to" : {
+                    "arrival" : "2024-02-05T20:44:56.000+0000",
+                    "departure" : "2024-02-05T20:44:56.000+0000",
+                    "lat" : 33.95026,
+                    "lon" : -83.990013,
+                    "name" : "Nash St & Stone Mountain St",
+                    "stopCode" : "539",
+                    "stopId" : "GwinnettCountyTransit:539",
+                    "vertexType" : "TRANSIT"
+                },
+                "transitLeg" : False
+            },
+            {
+                "agencyId" : "GwinnettCountyTransit:GCT",
+                "agencyName" : "Gwinnett County Transit",
+                "agencyUrl" : "https://www.ridegwinnett.com/",
+                "arrivalDelay" : 0,
+                "departureDelay" : 0,
+                "distance" : 1523.02,
+                "duration" : 187.0,
+                "endTime" : "2024-02-05T20:48:03.000+0000",
+                "from" : {
+                    "arrival" : "2024-02-05T20:44:56.000+0000",
+                    "departure" : "2024-02-05T20:44:56.000+0000",
+                    "lat" : 33.95026,
+                    "lon" : -83.990013,
+                    "name" : "Nash St & Stone Mountain St",
+                    "stopCode" : "539",
+                    "stopId" : "GwinnettCountyTransit:539",
+                    "stopIndex" : 56,
+                    "stopSequence" : 2696,
+                    "vertexType" : "TRANSIT"
+                },
+                "headsign" : "5 Forks Trickum",
+                "interlineWithPreviousLeg" : False,
+                "intermediateStops" : [
+                    {
+                        "arrival" : "2024-02-05T20:45:52.000+0000",
+                        "departure" : "2024-02-05T20:45:52.000+0000",
+                        "lat" : 33.94804,
+                        "lon" : -83.986761,
+                        "name" : "S Clayton St & Wells Fargo",
+                        "stopCode" : "836",
+                        "stopId" : "GwinnettCountyTransit:836",
+                        "stopIndex" : 57,
+                        "stopSequence" : 2752,
+                        "vertexType" : "TRANSIT"
+                    },
+                    {
+                        "arrival" : "2024-02-05T20:46:29.000+0000",
+                        "departure" : "2024-02-05T20:46:29.000+0000",
+                        "lat" : 33.945915,
+                        "lon" : -83.985502,
+                        "name" : "Grayson Hwy & Phillip St (Citgo)",
+                        "stopCode" : "677",
+                        "stopId" : "GwinnettCountyTransit:677",
+                        "stopIndex" : 58,
+                        "stopSequence" : 2789,
+                        "vertexType" : "TRANSIT"
+                    },
+                    {
+                        "arrival" : "2024-02-05T20:46:48.000+0000",
+                        "departure" : "2024-02-05T20:46:48.000+0000",
+                        "lat" : 33.943778,
+                        "lon" : -83.984257,
+                        "name" : "Grayson Hwy & St. Lawrence Church",
+                        "stopCode" : "781",
+                        "stopId" : "GwinnettCountyTransit:781",
+                        "stopIndex" : 59,
+                        "stopSequence" : 2808,
+                        "vertexType" : "TRANSIT"
+                    },
+                    {
+                        "arrival" : "2024-02-05T20:47:25.000+0000",
+                        "departure" : "2024-02-05T20:47:25.000+0000",
+                        "lat" : 33.941891,
+                        "lon" : -83.98321,
+                        "name" : "Grayson Hwy & Associated Credit Union",
+                        "stopCode" : "288",
+                        "stopId" : "GwinnettCountyTransit:288",
+                        "stopIndex" : 60,
+                        "stopSequence" : 2845,
+                        "vertexType" : "TRANSIT"
+                    }
+                ],
+                "legGeometry" : {
+                    "length" : 25,
+                    "points" : "k|enEvhs_OACGy@?y@NmCrAoBzDkE~CgBB???dLwFB???fLyFBA??rJwE??AAd@Qb@Un@[d@U^hAtCxJ"
+                },
+                "mode" : "BUS",
+                "pathway" : False,
+                "realTime" : False,
+                "route" : "Lawrenceville - GTC - Sugarloaf Mills",
+                "routeColor" : "AB0634",
+                "routeId" : "GwinnettCountyTransit:40",
+                "routeLongName" : "Lawrenceville - GTC - Sugarloaf Mills",
+                "routeShortName" : "40",
+                "routeTextColor" : "FFFFFF",
+                "routeType" : 3,
+                "serviceDate" : "2024-02-05",
+                "startTime" : "2024-02-05T20:44:56.000+0000",
+                "steps" : [
+
+                ],
+                "to" : {
+                    "arrival" : "2024-02-05T20:48:03.000+0000",
+                    "departure" : "2024-02-05T20:48:03.000+0000",
+                    "lat" : 33.940332,
+                    "lon" : -83.984885,
+                    "name" : "Gwinnett Dr & Town Center Cinemas OB",
+                    "stopCode" : "351",
+                    "stopId" : "GwinnettCountyTransit:351",
+                    "stopIndex" : 61,
+                    "stopSequence" : 2883,
+                    "vertexType" : "TRANSIT"
+                },
+                "transitLeg" : True,
+                "tripBlockId" : "305",
+                "tripId" : "GwinnettCountyTransit:t5DC-b131-sl2"
+            },
+            {
+                "arrivalDelay" : 0,
+                "departureDelay" : 0,
+                "distance" : 266.78,
+                "duration" : 154.0,
+                "endTime" : "2024-02-05T20:50:37.000+0000",
+                "from" : {
+                    "arrival" : "2024-02-05T20:48:03.000+0000",
+                    "departure" : "2024-02-05T20:48:03.000+0000",
+                    "lat" : 33.940332,
+                    "lon" : -83.984885,
+                    "name" : "Gwinnett Dr & Town Center Cinemas OB",
+                    "stopCode" : "351",
+                    "stopId" : "GwinnettCountyTransit:351",
+                    "vertexType" : "TRANSIT"
+                },
+                "interlineWithPreviousLeg" : False,
+                "legGeometry" : {
+                    "length" : 16,
+                    "points" : "a~cnEphr_O??AEACGWEMEOWy@EOLELIVK\\Q^SxAfFLG"
+                },
+                "mode" : "WALK",
+                "pathway" : False,
+                "realTime" : False,
+                "rentedBike" : False,
+                "route" : "",
+                "startTime" : "2024-02-05T20:48:03.000+0000",
+                "steps" : [
+                    {
+                        "absoluteDirection" : "EAST",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 70.29,
+                        "lat" : 33.9403368,
+                        "lon" : -83.9848871,
+                        "relativeDirection" : "DEPART",
+                        "stayOn" : False,
+                        "streetName" : "sidewalk"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTHEAST",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 70.09,
+                        "lat" : 33.9406053,
+                        "lon" : -83.9841979,
+                        "relativeDirection" : "RIGHT",
+                        "stayOn" : True,
+                        "streetName" : "service road"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTHWEST",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 118.36,
+                        "lat" : 33.9400377,
+                        "lon" : -83.9838685,
+                        "relativeDirection" : "RIGHT",
+                        "stayOn" : True,
+                        "streetName" : "parking aisle"
+                    },
+                    {
+                        "absoluteDirection" : "SOUTHEAST",
+                        "area" : False,
+                        "bogusName" : True,
+                        "distance" : 8.05,
+                        "lat" : 33.93958,
+                        "lon" : -83.9850269,
+                        "relativeDirection" : "LEFT",
+                        "stayOn" : True,
+                        "streetName" : "service road"
+                    }
+                ],
+                "to" : {
+                    "arrival" : "2024-02-05T20:50:37.000+0000",
+                    "lat" : 33.939358,
+                    "lon" : -83.98538,
+                    "name" : "Destination Gwinnett Voter Reg Center (455 Grayson Highway, Lawrenceville, GA)",
+                    "vertexType" : "NORMAL"
+                },
+                "transitLeg" : False
+            }
+        ],
+        "startTime" : "2024-02-05T20:40:00.000+0000",
+        "transfers" : 0,
+        "transitTime" : 187,
+        "waitingTime" : 0,
+        "walkDistance" : 786.14,
+        "walkLimitExceeded" : False,
+        "walkTime" : 450
+    },
+    "itineraryExistence" : {
+        "_id" : "a6f5aa20-1fbd-4938-8b93-446ee2becf76",
+        "dateCreated" : "2024-02-05T20:13:45.531+0000",
+        "error" : False,
+        "friday" : {
+            "invalidDates" : [
+
+            ],
+            "valid" : True,
+            "validDates" : [
+                "2024-02-09"
+            ]
+        },
+        "lastUpdated" : "2024-02-05T20:13:45.531+0000",
+        "monday" : {
+            "invalidDates" : [
+
+            ],
+            "valid" : True,
+            "validDates" : [
+                "2024-02-05"
+            ]
+        },
+        "thursday" : {
+            "invalidDates" : [
+
+            ],
+            "valid" : True,
+            "validDates" : [
+                "2024-02-08"
+            ]
+        },
+        "timestamp" : "2024-02-05T20:13:45.531+0000",
+        "tuesday" : {
+            "invalidDates" : [
+
+            ],
+            "valid" : True,
+            "validDates" : [
+                "2024-02-06"
+            ]
+        },
+        "wednesday" : {
+            "invalidDates" : [
+
+            ],
+            "valid" : True,
+            "validDates" : [
+                "2024-02-07"
+            ]
+        }
+    },
+    "journeyState" : {
+        "baselineArrivalTimeEpochMillis" : 1707252637000,
+        "baselineDepartureTimeEpochMillis" : 1707252000000,
+        "hasRealtimeData" : False,
+        "lastCheckedEpochMillis" : 1707166285708,
+        "lastNotificationTimeMillis" : 0,
+        "lastNotifications" : [
+
+        ],
+        "matchingItinerary" : {
+            "alerts" : [
+                {
+                    "alertHeaderText" : "Expect Delays - Starting on January 22, Atlanta Gas Light will be replacing natural gas pipelines along Buford Highway in Norcross and Peachtree Corners.\n",
+                    "effectiveEndDate" : "2024-06-30T00:00:00.000+0000",
+                    "effectiveStartDate" : "2024-01-22T00:00:00.000+0000"
+                },
+                {
+                    "alertHeaderText" : "This work may result in delays on routes 10A/10B, 20, and 35.  Work will take place from 7PM to 5AM Saturday through Friday each week. The final phase of replacement work is expected to begin in late summer 2024.",
+                    "effectiveEndDate" : "2024-06-30T00:00:00.000+0000",
+                    "effectiveStartDate" : "2024-01-22T00:00:00.000+0000"
+                }
+            ],
+            "duration" : 637,
+            "elevationGained" : 0.0,
+            "elevationLost" : 0.0,
+            "endTime" : "2024-02-06T20:50:37.000+0000",
+            "fare" : {
+                "details" : {
+                    "regular" : [
+
+                    ],
+                    "senior" : [
+
+                    ],
+                    "youth" : [
+
+                    ]
+                },
+                "fare" : {
+                    "regular" : {
+                        "cents" : 0,
+                        "currency" : {
+                            "currency" : "USD",
+                            "currencyCode" : "USD",
+                            "defaultFractionDigits" : 2,
+                            "symbol" : "$"
+                        }
+                    },
+                    "senior" : {
+                        "cents" : 0,
+                        "currency" : {
+                            "currency" : "USD",
+                            "currencyCode" : "USD",
+                            "defaultFractionDigits" : 2,
+                            "symbol" : "$"
+                        }
+                    },
+                    "youth" : {
+                        "cents" : 0,
+                        "currency" : {
+                            "currency" : "USD",
+                            "currencyCode" : "USD",
+                            "defaultFractionDigits" : 2,
+                            "symbol" : "$"
+                        }
+                    }
+                }
+            },
+            "legs" : [
+                {
+                    "arrivalDelay" : 0,
+                    "departureDelay" : 0,
+                    "distance" : 519.36,
+                    "duration" : 296.0,
+                    "endTime" : "2024-02-06T20:44:56.000+0000",
+                    "from" : {
+                        "departure" : "2024-02-05T20:40:00.000+0000",
+                        "lat" : 33.95334,
+                        "lon" : -83.98808,
+                        "name" : "30 S Clayton St, Lawrenceville, Georgia",
+                        "vertexType" : "NORMAL"
+                    },
+                    "interlineWithPreviousLeg" : False,
+                    "legGeometry" : {
+                        "length" : 33,
+                        "points" : "iofnEr|r_O`@A@N?FJrBDbA@D@Rd@CdBKz@C`@Ch@ArAELA\\AH?`@C^DJBFFDHBHBRAL?`@@`@TEPE@^@N@NC?"
+                    },
+                    "mode" : "WALK",
+                    "pathway" : False,
+                    "realTime" : False,
+                    "rentedBike" : False,
+                    "route" : "",
+                    "startTime" : "2024-02-06T20:40:00.000+0000",
+                    "steps" : [
+                        {
+                            "absoluteDirection" : "SOUTH",
+                            "area" : False,
+                            "bogusName" : False,
+                            "distance" : 19.67,
+                            "lat" : 33.9533388,
+                            "lon" : -83.9880981,
+                            "relativeDirection" : "DEPART",
+                            "stayOn" : False,
+                            "streetName" : "South Clayton Street"
+                        },
+                        {
+                            "absoluteDirection" : "WEST",
+                            "area" : False,
+                            "bogusName" : False,
+                            "distance" : 108.7,
+                            "lat" : 33.9531625,
+                            "lon" : -83.9880815,
+                            "relativeDirection" : "RIGHT",
+                            "stayOn" : False,
+                            "streetName" : "Seminary Street"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTH",
+                            "area" : False,
+                            "bogusName" : False,
+                            "distance" : 249.68,
+                            "lat" : 33.953045,
+                            "lon" : -83.9892513,
+                            "relativeDirection" : "LEFT",
+                            "stayOn" : False,
+                            "streetName" : "South Perry Street"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTH",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 50.67,
+                            "lat" : 33.9508054,
+                            "lon" : -83.9890578,
+                            "relativeDirection" : "CONTINUE",
+                            "stayOn" : False,
+                            "streetName" : "link"
+                        },
+                        {
+                            "absoluteDirection" : "WEST",
+                            "area" : False,
+                            "bogusName" : False,
+                            "distance" : 38.21,
+                            "lat" : 33.9504787,
+                            "lon" : -83.9893447,
+                            "relativeDirection" : "SLIGHTLY_RIGHT",
+                            "stayOn" : False,
+                            "streetName" : "Nash Street"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTH",
+                            "area" : False,
+                            "bogusName" : False,
+                            "distance" : 23.18,
+                            "lat" : 33.9504786,
+                            "lon" : -83.9897586,
+                            "relativeDirection" : "LEFT",
+                            "stayOn" : False,
+                            "streetName" : "Stone Mountain Street"
+                        },
+                        {
+                            "absoluteDirection" : "WEST",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 29.25,
+                            "lat" : 33.950277,
+                            "lon" : -83.9896954,
+                            "relativeDirection" : "RIGHT",
+                            "stayOn" : False,
+                            "streetName" : "path"
+                        }
+                    ],
+                    "to" : {
+                        "arrival" : "2024-02-05T20:44:56.000+0000",
+                        "departure" : "2024-02-05T20:44:56.000+0000",
+                        "lat" : 33.95026,
+                        "lon" : -83.990013,
+                        "name" : "Nash St & Stone Mountain St",
+                        "stopCode" : "539",
+                        "stopId" : "GwinnettCountyTransit:539",
+                        "vertexType" : "TRANSIT"
+                    },
+                    "transitLeg" : False
+                },
+                {
+                    "agencyId" : "GwinnettCountyTransit:GCT",
+                    "agencyName" : "Gwinnett County Transit",
+                    "agencyUrl" : "https://www.ridegwinnett.com/",
+                    "alerts" : [
+                        {
+                            "alertHeaderText" : "Expect Delays - Starting on January 22, Atlanta Gas Light will be replacing natural gas pipelines along Buford Highway in Norcross and Peachtree Corners.\n",
+                            "effectiveEndDate" : "2024-06-30T00:00:00.000+0000",
+                            "effectiveStartDate" : "2024-01-22T00:00:00.000+0000"
+                        },
+                        {
+                            "alertHeaderText" : "This work may result in delays on routes 10A/10B, 20, and 35.  Work will take place from 7PM to 5AM Saturday through Friday each week. The final phase of replacement work is expected to begin in late summer 2024.",
+                            "effectiveEndDate" : "2024-06-30T00:00:00.000+0000",
+                            "effectiveStartDate" : "2024-01-22T00:00:00.000+0000"
+                        }
+                    ],
+                    "arrivalDelay" : 0,
+                    "departureDelay" : 0,
+                    "distance" : 1523.02,
+                    "duration" : 187.0,
+                    "endTime" : "2024-02-06T20:48:03.000+0000",
+                    "from" : {
+                        "arrival" : "2024-02-05T20:44:56.000+0000",
+                        "departure" : "2024-02-05T20:44:56.000+0000",
+                        "lat" : 33.95026,
+                        "lon" : -83.990013,
+                        "name" : "Nash St & Stone Mountain St",
+                        "stopCode" : "539",
+                        "stopId" : "GwinnettCountyTransit:539",
+                        "stopIndex" : 56,
+                        "stopSequence" : 2696,
+                        "vertexType" : "TRANSIT"
+                    },
+                    "headsign" : "5 Forks Trickum",
+                    "interlineWithPreviousLeg" : False,
+                    "intermediateStops" : [
+                        {
+                            "arrival" : "2024-02-05T20:45:52.000+0000",
+                            "departure" : "2024-02-05T20:45:52.000+0000",
+                            "lat" : 33.94804,
+                            "lon" : -83.986761,
+                            "name" : "S Clayton St & Wells Fargo",
+                            "stopCode" : "836",
+                            "stopId" : "GwinnettCountyTransit:836",
+                            "stopIndex" : 57,
+                            "stopSequence" : 2752,
+                            "vertexType" : "TRANSIT"
+                        },
+                        {
+                            "arrival" : "2024-02-05T20:46:29.000+0000",
+                            "departure" : "2024-02-05T20:46:29.000+0000",
+                            "lat" : 33.945915,
+                            "lon" : -83.985502,
+                            "name" : "Grayson Hwy & Phillip St (Citgo)",
+                            "stopCode" : "677",
+                            "stopId" : "GwinnettCountyTransit:677",
+                            "stopIndex" : 58,
+                            "stopSequence" : 2789,
+                            "vertexType" : "TRANSIT"
+                        },
+                        {
+                            "arrival" : "2024-02-05T20:46:48.000+0000",
+                            "departure" : "2024-02-05T20:46:48.000+0000",
+                            "lat" : 33.943778,
+                            "lon" : -83.984257,
+                            "name" : "Grayson Hwy & St. Lawrence Church",
+                            "stopCode" : "781",
+                            "stopId" : "GwinnettCountyTransit:781",
+                            "stopIndex" : 59,
+                            "stopSequence" : 2808,
+                            "vertexType" : "TRANSIT"
+                        },
+                        {
+                            "arrival" : "2024-02-05T20:47:25.000+0000",
+                            "departure" : "2024-02-05T20:47:25.000+0000",
+                            "lat" : 33.941891,
+                            "lon" : -83.98321,
+                            "name" : "Grayson Hwy & Associated Credit Union",
+                            "stopCode" : "288",
+                            "stopId" : "GwinnettCountyTransit:288",
+                            "stopIndex" : 60,
+                            "stopSequence" : 2845,
+                            "vertexType" : "TRANSIT"
+                        }
+                    ],
+                    "legGeometry" : {
+                        "length" : 25,
+                        "points" : "k|enEvhs_OACGy@?y@NmCrAoBzDkE~CgBB???dLwFB???fLyFBA??rJwE??AAd@Qb@Un@[d@U^hAtCxJ"
+                    },
+                    "mode" : "BUS",
+                    "pathway" : False,
+                    "realTime" : False,
+                    "route" : "Lawrenceville - GTC - Sugarloaf Mills",
+                    "routeColor" : "AB0634",
+                    "routeId" : "GwinnettCountyTransit:40",
+                    "routeLongName" : "Lawrenceville - GTC - Sugarloaf Mills",
+                    "routeShortName" : "40",
+                    "routeTextColor" : "FFFFFF",
+                    "routeType" : 3,
+                    "serviceDate" : "2024-02-05",
+                    "startTime" : "2024-02-06T20:44:56.000+0000",
+                    "steps" : [
+
+                    ],
+                    "to" : {
+                        "arrival" : "2024-02-05T20:48:03.000+0000",
+                        "departure" : "2024-02-05T20:48:03.000+0000",
+                        "lat" : 33.940332,
+                        "lon" : -83.984885,
+                        "name" : "Gwinnett Dr & Town Center Cinemas OB",
+                        "stopCode" : "351",
+                        "stopId" : "GwinnettCountyTransit:351",
+                        "stopIndex" : 61,
+                        "stopSequence" : 2883,
+                        "vertexType" : "TRANSIT"
+                    },
+                    "transitLeg" : True,
+                    "tripBlockId" : "305",
+                    "tripId" : "GwinnettCountyTransit:t5DC-b131-sl2"
+                },
+                {
+                    "arrivalDelay" : 0,
+                    "departureDelay" : 0,
+                    "distance" : 266.78,
+                    "duration" : 154.0,
+                    "endTime" : "2024-02-06T20:50:37.000+0000",
+                    "from" : {
+                        "arrival" : "2024-02-05T20:48:03.000+0000",
+                        "departure" : "2024-02-05T20:48:03.000+0000",
+                        "lat" : 33.940332,
+                        "lon" : -83.984885,
+                        "name" : "Gwinnett Dr & Town Center Cinemas OB",
+                        "stopCode" : "351",
+                        "stopId" : "GwinnettCountyTransit:351",
+                        "vertexType" : "TRANSIT"
+                    },
+                    "interlineWithPreviousLeg" : False,
+                    "legGeometry" : {
+                        "length" : 16,
+                        "points" : "a~cnEphr_O??AEACGWEMEOWy@EOLELIVK\\Q^SxAfFLG"
+                    },
+                    "mode" : "WALK",
+                    "pathway" : False,
+                    "realTime" : False,
+                    "rentedBike" : False,
+                    "route" : "",
+                    "startTime" : "2024-02-06T20:48:03.000+0000",
+                    "steps" : [
+                        {
+                            "absoluteDirection" : "EAST",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 70.29,
+                            "lat" : 33.9403368,
+                            "lon" : -83.9848871,
+                            "relativeDirection" : "DEPART",
+                            "stayOn" : False,
+                            "streetName" : "sidewalk"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTHEAST",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 70.09,
+                            "lat" : 33.9406053,
+                            "lon" : -83.9841979,
+                            "relativeDirection" : "RIGHT",
+                            "stayOn" : True,
+                            "streetName" : "service road"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTHWEST",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 118.36,
+                            "lat" : 33.9400377,
+                            "lon" : -83.9838685,
+                            "relativeDirection" : "RIGHT",
+                            "stayOn" : True,
+                            "streetName" : "parking aisle"
+                        },
+                        {
+                            "absoluteDirection" : "SOUTHEAST",
+                            "area" : False,
+                            "bogusName" : True,
+                            "distance" : 8.05,
+                            "lat" : 33.93958,
+                            "lon" : -83.9850269,
+                            "relativeDirection" : "LEFT",
+                            "stayOn" : True,
+                            "streetName" : "service road"
+                        }
+                    ],
+                    "to" : {
+                        "arrival" : "2024-02-05T20:50:37.000+0000",
+                        "lat" : 33.939358,
+                        "lon" : -83.98538,
+                        "name" : "Destination Gwinnett Voter Reg Center (455 Grayson Highway, Lawrenceville, GA)",
+                        "vertexType" : "NORMAL"
+                    },
+                    "transitLeg" : False
+                }
+            ],
+            "startTime" : "2024-02-06T20:40:00.000+0000",
+            "transfers" : 0,
+            "transitTime" : 187,
+            "waitingTime" : 0,
+            "walkDistance" : 786.14,
+            "walkLimitExceeded" : False,
+            "walkTime" : 450
+        },
+        "scheduledArrivalTimeEpochMillis" : 1707252637000,
+        "scheduledDepartureTimeEpochMillis" : 1707252000000,
+        "targetDate" : "2024-02-06",
+        "tripStatus" : "TRIP_UPCOMING"
+    },
+    "lastUpdated" : "2024-02-05T20:13:45.529+0000",
+    "leadTimeInMinutes" : 30,
+    "monday" : True,
+    "notifyAtLeadingInterval" : True,
+    "notifyOnAlert" : True,
+    "notifyOnItineraryChange" : True,
+    "queryParams" : "date=2024-02-05&fromPlace=30+S+Clayton+St%2C+Lawrenceville%2C+Georgia%3A%3A33.95334%2C-83.98808&maxWalkDistance=1207&otherThanPreferredRoutesPenalty=900&ui_activeSearch=pg31uufe0&numItineraries=3&ui_activeItinerary=0&mode=WALK%2CBUS&arriveBy=False&ignoreRealtimeUpdates=True&showIntermediateStops=True&toPlace=Destination+Gwinnett+Voter+Reg+Center+%28455+Grayson+Highway%2C+Lawrenceville%2C+GA%29%3A%3A33.939358%2C-83.98538&time=15%3A12",
+    "saturday" : False,
+    "snoozed" : False,
+    "sunday" : False,
+    "thursday" : True,
+    "to" : {
+        "arrival" : "2024-02-05T20:50:37.000+0000",
+        "lat" : 33.939358,
+        "lon" : -83.98538,
+        "name" : "Destination Gwinnett Voter Reg Center (455 Grayson Highway, Lawrenceville, GA)",
+        "vertexType" : "NORMAL"
+    },
+    "tripName" : "GMU2 Home to Voter Reg Center",
+    "tripRequestId" : "98e0ca5b-1d73-4095-b8bd-214d8aa21f9a",
+    "tripTime" : "15:12",
+    "tuesday" : True,
+    "userId" : "5a39494b-4b9d-4b6d-9cbd-19b42cc06dcb",
+    "wednesday" : True
+}
+]

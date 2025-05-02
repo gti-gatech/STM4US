@@ -6,7 +6,7 @@
     "version" : "2023-08-30T18:48:19Z"
   },
   "servers" : [ {
-    "url" : "https://e5ppg6jyd6.execute-api.us-east-2.amazonaws.com/{basePath}",
+    "url" : "https://<api-id>.execute-api.us-east-2.amazonaws.com/{basePath}",
     "variables" : {
       "basePath" : {
         "default" : "dev"

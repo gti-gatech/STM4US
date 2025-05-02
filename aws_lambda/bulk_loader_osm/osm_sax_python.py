@@ -20,7 +20,7 @@ class OsmDataHandler( xml.sax.ContentHandler ):
     # END_POINT = "(End Point URL)"
     MAIN_ELEMENTS = ["node", "way", "relation"]
     
-    def __init__(self, printer, querywriter,dataset_id):
+    def __init__(self, printer, querywriter,dataset_id,ignore_tags):
     
       #self.CurrentData = ""
       self.printer = printer
@@ -28,6 +28,7 @@ class OsmDataHandler( xml.sax.ContentHandler ):
       self.currElement = {}
       self.tags = {"node":set(),"way":set(),"relation":set()}
       self.dataset_id = dataset_id
+      self.ignore_tags = ignore_tags
     
     # Call when an element starts
     def startElement(self, name, attributes):
@@ -113,8 +114,9 @@ class OsmDataHandler( xml.sax.ContentHandler ):
             printStr = "  key: " + tagKey + " ||" + " value: " + tagValue
             print(printStr)
             """
-            self.currElement['tags'][attributes['k']] = attributes['v']
-            self.tags[self.currElement['type']].add(attributes['k'])
+            if not self.ignore_tags:
+                self.currElement['tags'][attributes['k']] = attributes['v']
+                self.tags[self.currElement['type']].add(attributes['k'])
 
 
 

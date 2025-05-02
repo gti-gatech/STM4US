@@ -32,10 +32,13 @@ class OsmAWSBulkLoadCSVWriter:
         for node in self.osmNodes:
             datasetid = str(math.floor(10*float(node['tags']['lat']))/10) + "N" + str(math.floor(10*float(node['tags']['lon']))/-10) + "W"
             datasetIds[node['id']] = datasetid
-            row = "n{},\tOSM-NODE,\t{},\t{},\t{},\t{},\t".\
-                format(node['id'], datasetid, node['id'], node['tags']['lat'], node['tags']['lon']) + \
-                    ",\t".join('"{}"'.format(node['tags'][tag].replace('"','""')) \
-                               if tag in node['tags'] else '' for tag in tags['node']) + "\n"
+            # row = "n{},\tOSM-NODE,\t{},\t{},\t{},\t{},\t".\
+            #     format(node['id'], datasetid, node['id'], node['tags']['lat'], node['tags']['lon']) + \
+            #         ",\t".join('"{}"'.format(node['tags'][tag].replace('"','""')) \
+            #                    if tag in node['tags'] else '' for tag in tags['node']) + "\n"
+            row = ",\t".join(
+                ["n{},\tOSM-NODE,\t{},\t{},\t{},\t{}".format(node['id'], datasetid, node['id'], node['tags']['lat'], node['tags']['lon'])] + \
+                ['"{}"'.format(node['tags'][tag].replace('"','""')) if tag in node['tags'] else '' for tag in tags['node']]) + "\n"
             nodeFile.write(row)
         nodeFile.close()
 
@@ -54,9 +57,9 @@ class OsmAWSBulkLoadCSVWriter:
                 datasetid = datasetIds[way['nodes'][-1]]
             else:
                 datasetid = data[1]
-            row = "w{},\tOSM-WAY,\t{},\t{},\t".format(way['id'], datasetid, way['id']) + \
-                ",\t".join('"{}"'.format(way['tags'][tag].replace('"','""')) \
-                           if tag in way['tags'] else '' for tag in tags['way']) + "\n"
+            row = ",\t".join(
+                ["w{},\tOSM-WAY,\t{},\t{}".format(way['id'], datasetid, way['id'])] + \
+                ['"{}"'.format(way['tags'][tag].replace('"','""')) if tag in way['tags'] else '' for tag in tags['way']]) + "\n"
             wayFile.write(row)
             rowLink = "wf{0},\tFIRST,\tw{0},\tn{1},\t{2},\n".format(way['id'], way['nodes'][0], datasetid)
             wayLinkFile.write(rowLink)
@@ -78,9 +81,9 @@ class OsmAWSBulkLoadCSVWriter:
         relationFile.write(relationHeader)
         relationLinkFile.write(relationLinkHeader)
         for relation in self.osmRelations:
-            row = "r{0},\tOSM-RELATION,\t{1},\t{0},\t".format(relation['id'], data[1]) + \
-                ",\t".join('"{}"'.format(relation['tags'][tag].replace('"','""')) \
-                           if tag in relation['tags'] else '' for tag in tags['relation']) + "\n"
+            row = ",\t".join(
+                ["r{0},\tOSM-RELATION,\t{1},\t{0},\t".format(relation['id'], data[1])] + \
+                ['"{}"'.format(relation['tags'][tag].replace('"','""')) if tag in relation['tags'] else '' for tag in tags['relation']]) + "\n"
             relationFile.write(row)
             for i in range(len(relation['members'])):
                 
