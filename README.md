@@ -1,6 +1,9 @@
 # <a name="its4us"></a>ITS4US
 
-ITS4US is a program aims to solve mobility challenges for all travelers with a specific focus on underserved communities, including people with physical or cognitive disabilities, older adults, low-income individuals, and LEP travelers. This program seeks to enable communities to build local partnerships, develop and deploy integrated and replicable mobility solutions to achieve complete trips for all travelers.
+The U.S. Department of Transportation (U.S. DOT) ITS4US Deployment Program aims to leverage new and innovative solutions and existing systems such as connected vehicle (CV) deployments, an advanced trip routing engine, and a regional trip planner, all to be developed within an open-sourced application. The Georgia Mobility and Access Planner (G-MAP) will allow travelers to create a personalized trip plan to navigate physical infrastructure, resolve unexpected obstacles, and ensure visibility throughout their travel.
+
+## <a name="stm"></a>STM
+This repository contains code for the Space Time Memory (STM) platform which is part of the ITS4US Georgia Mobility and Access Planner (G-MAP) .
 
 ## <a name="installing_getting_started"></a>Installing / Getting Started - AWS
 ### <a name="setting_up_aws"></a>Setting up AWS
