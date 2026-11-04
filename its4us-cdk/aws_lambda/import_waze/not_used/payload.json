@@ -1,0 +1,10 @@
+{
+    "stageVariables": {
+        "env": "dev",
+        "LOAD_BUCKET": "its4us-upload-dev",
+        "WAZE_FOLDER": "waze-alerts",
+        "QUERY_URL": "bolt://example-neptune.cluster.example.com:8182"
+    },
+    "httpMethod": "POST",
+    "body": {"id": "34.0N84.4W"}
+}

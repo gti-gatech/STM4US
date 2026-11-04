@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "its4us-cdk"
+version = "0.1.0"
+description = "ITS4US CDK infrastructure for Lambda, API Gateway, Neptune"
+dependencies = [
+    "aws-cdk-lib>=2.0.0",
+    "constructs>=10.0.0",
+    "aws-cdk.aws-neptune-alpha"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["its4us_cdk*"]
