@@ -1,0 +1,10 @@
+LAMBDA_PYTHON_VERSION = "3.14"
+#NAVIGATOR_BUCKET = "its4us-navigator" # legacy bucket
+#NAVIGATOR_FOLDER = "navigator" # future migration from legacy bucket
+PERFORMANCE_METRICS_FOLDER = "performance-metrics"
+WAZE_FOLDER = "waze-alerts"
+#TEST_FOLDER = "test"
+BASE_IMPEDANCE_CALCULATION_HELPER_ID = "base-impedance-calculation-helper"
+CALCULATE_IMPEDANCE_HELPER_ID = "calculate-impedance-helper"
+HEALTH_CHECK_FUNCTION_ID = "check-function-health"
+CLOUDWATCH_LOG_CHECK_FUNCTION_ID = "check-cloudwatch-log"
